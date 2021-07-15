@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3.常用内置函数库s on devops</title>
+    <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/</link>
+    <description>Recent content in 3.常用内置函数库s on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%96%87%E4%BB%B6io%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%96%87%E4%BB%B6io%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/</guid>
+      <description>go常用的语言包
+1.[]byte操作2.buffer操作3.文件操作1.os 2.io 3.io/ioutils 4.buffers 最底层的
+1. 使用os包对文件进行操作#2. 文件操作的进一步升级#io软件包
+3. 文件操作的进一步抽象#buffers#[]byte类型转
+string类型转</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/2.%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/2.%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</guid>
+      <description>fmt标准库是我们在学习go语言的过程中接触的最早也是使用最频繁的一个函数库了，接下来我们讲解一下fmt函数库中常用的一些函数。
+fmt#fmt包实现了标准的格式化输入和格式化的输出打印。
+格式化输入#fmt.Scan#fmt.Scanf#fmt.Scanf不同于fmt.Scan简单的以空格作为输入数据的分隔符，fmt.Scanf为输入数据指定了具体的输入内容格式，只有按照格式输入数据才会被扫描并存入对应的变量。
+ 标准输入# 一系列的函数可以扫描格式化文本
+Scan : Scan从标准输入中读取字符串,将成功读取到的字符串保存到指定的变量,以空格或换行为分隔符,换行为停止输入。Scanln : 从标准输入中读取字符串，并将成功读取到的字符串保存到指定的变量，Scanf : 从标准输入中读取文本，从字符串中输入
+SscanSscanlnSscanf从文件中输入
+FscanFscanlnFscanf标准输出# PrintPrintlnPrintfSprintSprintlnSprintfFprintFprintlnFprintf</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/3.%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/3.%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</guid>
+      <description>获取命令行参数有三种方式
+1.os.args[]
+2.flag
+3.corba
+1. os.args[]#2. flag#当我们运行go语言程序的时候，flag包实现了命令行参数的解析，当开始使用flag包的时候，需要将
+type Flag struct { Name string // flag在命令行中的名字  Usage string // 帮助信息  Value Value // 要设置的值  DefValue string // 默认值（文本格式），用于使用信息 } import &amp;quot;flag&amp;quot;// 等所有的flag都注册完了以后,需要flag.Parse()接收int类型信息:
+3.命令行库corba#github地址:
+https://github.com/spf13/cobra</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/4.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/4.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/1.%E8%AF%B7%E6%B1%82%E5%87%BD%E6%95%B0%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/1.%E8%AF%B7%E6%B1%82%E5%87%BD%E6%95%B0%E7%AE%80%E4%BB%8B/</guid>
+      <description>使用go语言发送http请求#常用的有GET,POST,PUT,DELETE,PATCH等操作
+1.request 2.header 3.url 4.body 5.初始化一个client 6.发送网络请求 7.解析结果 1.创建并封装一个request对象#1.1 Request对象简介和分析#request是一个结构体对象，它不仅在client请求端使用，有时候也需要在服务端使用。 1.2 创建一个Request结构体对象#func NewRequest(method, urlStr string, body io.Reader) (*Request, error)参数详解:method可以是http请求的任何方法，比如：GET,POST,PUT,DELET,PATCH,HEAD等方法。url是一个请求路径:body,如果body参数实现了io.Closer接口，Request返回值的Body 字段会被设置为body，并会被Client类型的Do、Post和PostFOrm方法以及Transport.RoundTrip方法关闭。此时，我们就创建好一个Request请求对象了，但是一个完整正确的Request对象不仅仅只是实例化就完成了，还必须配置好正确的Header，正确完成的URL请求路径，并且配置好正确的body请求体，至于cookies和sessions的配置是在服务端完成的。等完成Request对象以后，我们就可以把这个request对象发送给服务端了。
+2.配置Request对象的Header，向Request的Header中添加相应的键值对#当我们使用http的NewRequest方法创建好了一个request请求对象以后，就可以正确的配置这个请求对象的Header了，请求对象的Header是一个map对象，map对象的键是string字符串类型，值是string类型的切片，也就是说值可以有多个string值组成。
+type Header map[string][]string 1.获取Header中的值
+req.Header.Get(&amp;quot;&amp;quot;)
+2.设置Header中的值
+req.Header.Set(&amp;quot;&amp;quot;)
+3.添加Header中的值
+req.Header.Add(&amp;quot;&amp;quot;)
+4.删除Header中的键值对
+req.Header.Del(&amp;quot;&amp;quot;)
+5.以有限格式写入Header
+req.Header.Write(&amp;quot;&amp;quot;)
+6.WriteSubset以有线格式将头域写入w。当exclude不为nil时，如果h的键值对的键在exclude中存在且其对应值为真，该键值对就不会被写入w。
+req.Header.WriteSubset(&amp;quot;&amp;quot;)
+特殊的Header cookies，seesion以及token#用户在输入用户名和密码之后，浏览器将用户名和密码发送给服务器，服务器进行验证，验证通过之后将用户信息加密后封装成Cookie放在请求头中返回给浏览器。浏览器收到服务器返回数据，发现请求头中有一个：Set-Cookie，然后它就把这个Cookie保存起来，下次浏览器再请求服务器的时候，会把Cookie也放在请求头中传给服务器：服务器收到请求后从请求头中拿到cookie，然后解析并到用户信息，说明此用户已登录，Cookie是将数据保存在客户端的。这里我们可以看到，用户信息是保存在Cookie中，也就相当于是保存在浏览器中，那就说用户可以随意修改用户信息，这是一种不安全的策略！强调一点：Cookie无论是服务器发给浏览器还是浏览器发给服务器，都是放在请求头中的
+cookie是指一个放置在一个Request请求对象中，Header中键为Cookie中的值或服务端回复的Header中键为Set-Cookie中的值。
+3.正确配置Request对象的URL#一个URL的基本格式如下： scheme://[userinfo@]host/path[?query][#fragment]  4.正确配置Request对象的body体#5.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/2.%E9%80%9A%E7%94%A8%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/2.%E9%80%9A%E7%94%A8%E6%93%8D%E4%BD%9C/</guid>
+      <description>通用网络请求操作#目前GO语言只对GET,POST,POSTFORM,HEAD进行了封装，其他的像PUT，PATCH等操作只能用通用的DO方法进行请求。
+1. 通用的http请求函数使用#1.1 通用的http请求函数分析#1.2 通用的http请求函数封装#1.3 通用的http请求函数使用#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/3.GET%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/3.GET%E6%93%8D%E4%BD%9C/</guid>
+      <description>封装一个GET请求#使用通用的方法封装一个GET请求
+通用GET操作
+package mainimport (&amp;quot;bytes&amp;quot;&amp;quot;encoding/json&amp;quot;&amp;quot;io&amp;quot;&amp;quot;io/ioutil&amp;quot;&amp;quot;net/http&amp;quot;&amp;quot;time&amp;quot;)// 发送GET请求// url： 请求地址// response： 请求返回的内容func Get(url string) string {// 超时时间：5秒client := &amp;amp;http.Client{Timeout: 5 * time.Second}resp, err := client.Get(url)if err != nil {panic(err)}defer resp.Body.Close()var buffer [512]byteresult := bytes.NewBuffer(nil)for {n, err := resp.Body.Read(buffer[0:])result.Write(buffer[0:n])if err != nil &amp;amp;&amp;amp; err == io.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/4.POST%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/4.POST%E6%93%8D%E4%BD%9C/</guid>
+      <description>使用客户端进行POST请求操作#一. 使用通用方法封装(对于GO语言来说建议使用这种方法,因为节省精力)#1.创建一个request
+2.创建一个client
+3.进行post请求操作
+二. 直接使用封装好的POST (对于GO语言来说不常用,也不建议)#// 发送POST请求// url： 请求地址// data： POST请求提交的数据// contentType： 请求体格式，如：application/json// content： 请求放回的内容func Post(url string, data interface{}, contentType string) string {// 超时时间：5秒client := &amp;amp;http.Client{Timeout: 5 * time.Second}jsonStr, _ := json.Marshal(data)resp, err := client.Post(url, contentType, bytes.NewBuffer(jsonStr))if err != nil {panic(err)}defer resp.Body.Close()result, _ := ioutil.ReadAll(resp.Body)return string(result)}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/5.PUT%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/5.PUT%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/6.DELETE%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/6.DELETE%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/7.PATCH%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/7.PATCH%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/8.HEAD%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/8.HEAD%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

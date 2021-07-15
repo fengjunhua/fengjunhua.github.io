@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="三. 接口#综上所述，使用方法有上述缺点，因此go语言提出了接口的概念以及go语言提倡面向接口的编程，每个接口都由数个方法组成，接口的定义格式如下：
+空接口#空接口是指没有定义任何方法的接口，因此任意类型都实现了空接口，空接口类型的变量可以存放任意类型的变量。
+空接口的应用#1.空接口作为函数的参数
+使用空接口可以接受任意类型的函数参数2.空接口作为map的值
+interface
+空接口非空接口#// runtimeruntimetype eface struct {_type *_typedata unsafe.Pointer}// 有方法的interfacetype iface struct {tab *itabdata unsafe.Pointer}// src\runtime\type.gotype itab struct {inter *interfacetype_type *_typelink *itabhash uint32bad boolinhash boolunused [2]bytefun [1]uintptr}// src\runtime\type.gotype interfacetype struct {typ _typepkgpath namemhdr []imethod}// interface数据类型对应的typetype _type struct {size uintptrptrdata uintptrhash uint32tflag tflagalign uint8fieldalign uint8kind uint8alg *typeAlggcdata *bytestr nameOffptrToThis typeOff}可以看到两种类型的接口在内部的实现都是定义了两个字段的结构体，所以任何一个interface变量都是占用16个byte的内存空间。">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="三. 接口#综上所述，使用方法有上述缺点，因此go语言提出了接口的概念以及go语言提倡面向接口的编程，每个接口都由数个方法组成，接口的定义格式如下：
+空接口#空接口是指没有定义任何方法的接口，因此任意类型都实现了空接口，空接口类型的变量可以存放任意类型的变量。
+空接口的应用#1.空接口作为函数的参数
+使用空接口可以接受任意类型的函数参数2.空接口作为map的值
+interface
+空接口非空接口#// runtimeruntimetype eface struct {_type *_typedata unsafe.Pointer}// 有方法的interfacetype iface struct {tab *itabdata unsafe.Pointer}// src\runtime\type.gotype itab struct {inter *interfacetype_type *_typelink *itabhash uint32bad boolinhash boolunused [2]bytefun [1]uintptr}// src\runtime\type.gotype interfacetype struct {typ _typepkgpath namemhdr []imethod}// interface数据类型对应的typetype _type struct {size uintptrptrdata uintptrhash uint32tflag tflagalign uint8fieldalign uint8kind uint8alg *typeAlggcdata *bytestr nameOffptrToThis typeOff}可以看到两种类型的接口在内部的实现都是定义了两个字段的结构体，所以任何一个interface变量都是占用16个byte的内存空间。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/3.%E6%8E%A5%E5%8F%A3/" /><meta property="article:section" content="2.函数,方法和接口" />
+
+
+
+<title>3.接口 | devops</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e246e6a45b940b6ff71d8216783f10a80d910290a7c364c8bfd5d305d8545d62.css" integrity="sha256-4kbmpFuUC2/3HYIWeD8QqA2RApCnw2TIv9XTBdhUXWI=">
+<script defer src="/en.search.min.06c126bd879add8dfc6cf7dfef92762bf3de30b6b029e902278f9c0768b83575.js" integrity="sha256-BsEmvYea3Y38bPff75J2K/PeMLawKekCJ4&#43;cB2i4NXU="></script>
+
+<script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>devops</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e96617f4455376846834dea88b63c3b8" class="toggle"  />
+    <label for="section-e96617f4455376846834dea88b63c3b8" class="flex justify-between">
+      <a href="https://example.com/go/example/" class="">go语言基础教程</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/with-toc/" class="">With ToC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/without-toc/" class="">Without ToC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-89a07efdaa17fe57e683d64a53061a72" class="toggle"  />
+    <label for="section-89a07efdaa17fe57e683d64a53061a72" class="flex justify-between">
+      <a  class="">Collapsed</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/collapsed/3rd-level/" class="">3rd Level</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/collapsed/3rd-level/4th-level/" class="">4th Level</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/2.%E5%BE%AA%E7%8E%AF/" class="">go循环</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/katex/" class="">Katex</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-07f93371003cbe1967edc9403ddeae10" class="toggle"  />
+    <label for="section-07f93371003cbe1967edc9403ddeae10" class="flex justify-between">
+      <a href="https://example.com/go/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>3.接口</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h4 id="三-接口">
+  三. 接口
+  <a class="anchor" href="#%e4%b8%89-%e6%8e%a5%e5%8f%a3">#</a>
+</h4>
+<p>综上所述，使用方法有上述缺点，因此go语言提出了接口的概念以及go语言提倡面向接口的编程，每个接口都由数个方法组成，接口的定义格式如下：</p>
+<h5 id="空接口">
+  空接口
+  <a class="anchor" href="#%e7%a9%ba%e6%8e%a5%e5%8f%a3">#</a>
+</h5>
+<p>空接口是指没有定义任何方法的接口，因此任意类型都实现了空接口，空接口类型的变量可以存放任意类型的变量。</p>
+<h6 id="空接口的应用">
+  空接口的应用
+  <a class="anchor" href="#%e7%a9%ba%e6%8e%a5%e5%8f%a3%e7%9a%84%e5%ba%94%e7%94%a8">#</a>
+</h6>
+<p>1.空接口作为函数的参数</p>
+<pre><code>使用空接口可以接受任意类型的函数参数
+</code></pre><p>2.空接口作为map的值</p>
+<p>interface</p>
+<pre><code>空接口
+
+</code></pre><h5 id="非空接口">
+  非空接口
+  <a class="anchor" href="#%e9%9d%9e%e7%a9%ba%e6%8e%a5%e5%8f%a3">#</a>
+</h5>
+<pre><code>// runtimeruntime
+type eface struct {
+    _type *_type
+    data  unsafe.Pointer
+}
+
+// 有方法的interface
+type iface struct {
+    tab  *itab
+    data unsafe.Pointer
+}
+
+
+// src\runtime\type.go
+type itab struct {
+    inter  *interfacetype
+    _type  *_type
+    link   *itab
+    hash   uint32
+    bad    bool
+    inhash bool
+    unused [2]byte
+    fun    [1]uintptr
+}
+
+// src\runtime\type.go
+type interfacetype struct {
+    typ     _type
+    pkgpath name
+    mhdr    []imethod
+}
+// interface数据类型对应的type
+type _type struct {
+    size       uintptr
+    ptrdata    uintptr
+    hash       uint32
+    tflag      tflag
+    align      uint8
+    fieldalign uint8
+    kind       uint8
+    alg        *typeAlg
+    gcdata    *byte
+    str       nameOff
+    ptrToThis typeOff
+}
+
+</code></pre><p>可以看到两种类型的接口在内部的实现都是定义了两个字段的结构体，所以任何一个interface变量都是占用16个byte的内存空间。</p>
+<p>为什么使用接口开发</p>
+<p>1.调用函数的时候,需要引入包</p>
+<p>包名.函数名</p>
+<p>接口类型名:</p>
+<p>Go语言中很多包都有接口，比如io包中提供的</p>
+<h4 id="接口的实现">
+  接口的实现
+  <a class="anchor" href="#%e6%8e%a5%e5%8f%a3%e7%9a%84%e5%ae%9e%e7%8e%b0">#</a>
+</h4>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+    
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://example.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/ru/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Russian
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/zh/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Chinese
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/2.%e5%87%bd%e6%95%b0,%e6%96%b9%e6%b3%95%e5%92%8c%e6%8e%a5%e5%8f%a3/3.%e6%8e%a5%e5%8f%a3.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

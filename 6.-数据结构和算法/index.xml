@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6. 数据结构和算法s on devops</title>
+    <link>https://example.com/6.-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 6. 数据结构和算法s on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/6.-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/6.-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/1.%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/6.-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/1.%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</guid>
+      <description>数据结构#链表#栈和队列#列表#字典#树#排序算法#在计算机开发语言中，只要一提到排序算法，肯定是对切片的数值类型的数据进行排序，因为别的数据类型根本没有排序算法一说。
+选择排序#冒泡排序#插入排序#希尔排序#快速排序#</description>
+    </item>
+    
+  </channel>
+</rss>

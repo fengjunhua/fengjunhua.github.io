@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="使用go语言发送http请求#常用的有GET,POST,PUT,DELETE,PATCH等操作
+1.request 2.header 3.url 4.body 5.初始化一个client 6.发送网络请求 7.解析结果 1.创建并封装一个request对象#1.1 Request对象简介和分析#request是一个结构体对象，它不仅在client请求端使用，有时候也需要在服务端使用。 1.2 创建一个Request结构体对象#func NewRequest(method, urlStr string, body io.Reader) (*Request, error)参数详解:method可以是http请求的任何方法，比如：GET,POST,PUT,DELET,PATCH,HEAD等方法。url是一个请求路径:body,如果body参数实现了io.Closer接口，Request返回值的Body 字段会被设置为body，并会被Client类型的Do、Post和PostFOrm方法以及Transport.RoundTrip方法关闭。此时，我们就创建好一个Request请求对象了，但是一个完整正确的Request对象不仅仅只是实例化就完成了，还必须配置好正确的Header，正确完成的URL请求路径，并且配置好正确的body请求体，至于cookies和sessions的配置是在服务端完成的。等完成Request对象以后，我们就可以把这个request对象发送给服务端了。
+2.配置Request对象的Header，向Request的Header中添加相应的键值对#当我们使用http的NewRequest方法创建好了一个request请求对象以后，就可以正确的配置这个请求对象的Header了，请求对象的Header是一个map对象，map对象的键是string字符串类型，值是string类型的切片，也就是说值可以有多个string值组成。
+type Header map[string][]string 1.获取Header中的值
+req.Header.Get(&quot;&quot;)
+2.设置Header中的值
+req.Header.Set(&quot;&quot;)
+3.添加Header中的值
+req.Header.Add(&quot;&quot;)
+4.删除Header中的键值对
+req.Header.Del(&quot;&quot;)
+5.以有限格式写入Header
+req.Header.Write(&quot;&quot;)
+6.WriteSubset以有线格式将头域写入w。当exclude不为nil时，如果h的键值对的键在exclude中存在且其对应值为真，该键值对就不会被写入w。
+req.Header.WriteSubset(&quot;&quot;)
+特殊的Header cookies，seesion以及token#用户在输入用户名和密码之后，浏览器将用户名和密码发送给服务器，服务器进行验证，验证通过之后将用户信息加密后封装成Cookie放在请求头中返回给浏览器。浏览器收到服务器返回数据，发现请求头中有一个：Set-Cookie，然后它就把这个Cookie保存起来，下次浏览器再请求服务器的时候，会把Cookie也放在请求头中传给服务器：服务器收到请求后从请求头中拿到cookie，然后解析并到用户信息，说明此用户已登录，Cookie是将数据保存在客户端的。这里我们可以看到，用户信息是保存在Cookie中，也就相当于是保存在浏览器中，那就说用户可以随意修改用户信息，这是一种不安全的策略！强调一点：Cookie无论是服务器发给浏览器还是浏览器发给服务器，都是放在请求头中的
+cookie是指一个放置在一个Request请求对象中，Header中键为Cookie中的值或服务端回复的Header中键为Set-Cookie中的值。
+3.正确配置Request对象的URL#一个URL的基本格式如下： scheme://[userinfo@]host/path[?query][#fragment]  4.正确配置Request对象的body体#5.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="使用go语言发送http请求#常用的有GET,POST,PUT,DELETE,PATCH等操作
+1.request 2.header 3.url 4.body 5.初始化一个client 6.发送网络请求 7.解析结果 1.创建并封装一个request对象#1.1 Request对象简介和分析#request是一个结构体对象，它不仅在client请求端使用，有时候也需要在服务端使用。 1.2 创建一个Request结构体对象#func NewRequest(method, urlStr string, body io.Reader) (*Request, error)参数详解:method可以是http请求的任何方法，比如：GET,POST,PUT,DELET,PATCH,HEAD等方法。url是一个请求路径:body,如果body参数实现了io.Closer接口，Request返回值的Body 字段会被设置为body，并会被Client类型的Do、Post和PostFOrm方法以及Transport.RoundTrip方法关闭。此时，我们就创建好一个Request请求对象了，但是一个完整正确的Request对象不仅仅只是实例化就完成了，还必须配置好正确的Header，正确完成的URL请求路径，并且配置好正确的body请求体，至于cookies和sessions的配置是在服务端完成的。等完成Request对象以后，我们就可以把这个request对象发送给服务端了。
+2.配置Request对象的Header，向Request的Header中添加相应的键值对#当我们使用http的NewRequest方法创建好了一个request请求对象以后，就可以正确的配置这个请求对象的Header了，请求对象的Header是一个map对象，map对象的键是string字符串类型，值是string类型的切片，也就是说值可以有多个string值组成。
+type Header map[string][]string 1.获取Header中的值
+req.Header.Get(&quot;&quot;)
+2.设置Header中的值
+req.Header.Set(&quot;&quot;)
+3.添加Header中的值
+req.Header.Add(&quot;&quot;)
+4.删除Header中的键值对
+req.Header.Del(&quot;&quot;)
+5.以有限格式写入Header
+req.Header.Write(&quot;&quot;)
+6.WriteSubset以有线格式将头域写入w。当exclude不为nil时，如果h的键值对的键在exclude中存在且其对应值为真，该键值对就不会被写入w。
+req.Header.WriteSubset(&quot;&quot;)
+特殊的Header cookies，seesion以及token#用户在输入用户名和密码之后，浏览器将用户名和密码发送给服务器，服务器进行验证，验证通过之后将用户信息加密后封装成Cookie放在请求头中返回给浏览器。浏览器收到服务器返回数据，发现请求头中有一个：Set-Cookie，然后它就把这个Cookie保存起来，下次浏览器再请求服务器的时候，会把Cookie也放在请求头中传给服务器：服务器收到请求后从请求头中拿到cookie，然后解析并到用户信息，说明此用户已登录，Cookie是将数据保存在客户端的。这里我们可以看到，用户信息是保存在Cookie中，也就相当于是保存在浏览器中，那就说用户可以随意修改用户信息，这是一种不安全的策略！强调一点：Cookie无论是服务器发给浏览器还是浏览器发给服务器，都是放在请求头中的
+cookie是指一个放置在一个Request请求对象中，Header中键为Cookie中的值或服务端回复的Header中键为Set-Cookie中的值。
+3.正确配置Request对象的URL#一个URL的基本格式如下： scheme://[userinfo@]host/path[?query][#fragment]  4.正确配置Request对象的body体#5." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/1.%E8%AF%B7%E6%B1%82%E5%87%BD%E6%95%B0%E7%AE%80%E4%BB%8B/" /><meta property="article:section" content="3.常用内置函数库" />
+
+
+
+<title>1.请求函数简介 | devops</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e246e6a45b940b6ff71d8216783f10a80d910290a7c364c8bfd5d305d8545d62.css" integrity="sha256-4kbmpFuUC2/3HYIWeD8QqA2RApCnw2TIv9XTBdhUXWI=">
+<script defer src="/en.search.min.06c126bd879add8dfc6cf7dfef92762bf3de30b6b029e902278f9c0768b83575.js" integrity="sha256-BsEmvYea3Y38bPff75J2K/PeMLawKekCJ4&#43;cB2i4NXU="></script>
+
+<script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>devops</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e96617f4455376846834dea88b63c3b8" class="toggle"  />
+    <label for="section-e96617f4455376846834dea88b63c3b8" class="flex justify-between">
+      <a href="https://example.com/go/example/" class="">go语言基础教程</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/with-toc/" class="">With ToC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/without-toc/" class="">Without ToC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-89a07efdaa17fe57e683d64a53061a72" class="toggle"  />
+    <label for="section-89a07efdaa17fe57e683d64a53061a72" class="flex justify-between">
+      <a  class="">Collapsed</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/collapsed/3rd-level/" class="">3rd Level</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/collapsed/3rd-level/4th-level/" class="">4th Level</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/2.%E5%BE%AA%E7%8E%AF/" class="">go循环</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/katex/" class="">Katex</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-07f93371003cbe1967edc9403ddeae10" class="toggle"  />
+    <label for="section-07f93371003cbe1967edc9403ddeae10" class="flex justify-between">
+      <a href="https://example.com/go/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>1.请求函数简介</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h4 id="使用go语言发送http请求">
+  使用go语言发送http请求
+  <a class="anchor" href="#%e4%bd%bf%e7%94%a8go%e8%af%ad%e8%a8%80%e5%8f%91%e9%80%81http%e8%af%b7%e6%b1%82">#</a>
+</h4>
+<p>常用的有GET,POST,PUT,DELETE,PATCH等操作</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">1.request
+2.header
+3.url
+4.body
+5.初始化一个client
+6.发送网络请求
+7.解析结果
+</code></pre></div><h5 id="1创建并封装一个request对象">
+  1.创建并封装一个request对象
+  <a class="anchor" href="#1%e5%88%9b%e5%bb%ba%e5%b9%b6%e5%b0%81%e8%a3%85%e4%b8%80%e4%b8%aarequest%e5%af%b9%e8%b1%a1">#</a>
+</h5>
+<h6 id="11-request对象简介和分析">
+  1.1 Request对象简介和分析
+  <a class="anchor" href="#11-request%e5%af%b9%e8%b1%a1%e7%ae%80%e4%bb%8b%e5%92%8c%e5%88%86%e6%9e%90">#</a>
+</h6>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">request是一个结构体对象</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">它不仅在client请求端使用</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">有时候也需要在服务端使用</span><span style="color:#960050;background-color:#1e0010">。</span>
+</code></pre></div><h6 id="12-创建一个request结构体对象">
+  1.2 创建一个Request结构体对象
+  <a class="anchor" href="#12-%e5%88%9b%e5%bb%ba%e4%b8%80%e4%b8%aarequest%e7%bb%93%e6%9e%84%e4%bd%93%e5%af%b9%e8%b1%a1">#</a>
+</h6>
+<pre><code>func NewRequest(method, urlStr string, body io.Reader) (*Request, error)
+
+参数详解:
+method可以是http请求的任何方法，比如：GET,POST,PUT,DELET,PATCH,HEAD等方法。
+url是一个请求路径:
+body,如果body参数实现了io.Closer接口，Request返回值的Body 字段会被设置为body，并会被Client类型的Do、Post和PostFOrm方法以及Transport.RoundTrip方法关闭。
+</code></pre><p>此时，我们就创建好一个Request请求对象了，但是一个完整正确的Request对象不仅仅只是实例化就完成了，还必须配置好正确的Header，正确完成的URL请求路径，并且配置好正确的body请求体，至于cookies和sessions的配置是在服务端完成的。等完成Request对象以后，我们就可以把这个request对象发送给服务端了。</p>
+<h5 id="2配置request对象的header向request的header中添加相应的键值对">
+  2.配置Request对象的Header，向Request的Header中添加相应的键值对
+  <a class="anchor" href="#2%e9%85%8d%e7%bd%aerequest%e5%af%b9%e8%b1%a1%e7%9a%84header%e5%90%91request%e7%9a%84header%e4%b8%ad%e6%b7%bb%e5%8a%a0%e7%9b%b8%e5%ba%94%e7%9a%84%e9%94%ae%e5%80%bc%e5%af%b9">#</a>
+</h5>
+<p>当我们使用http的NewRequest方法创建好了一个request请求对象以后，就可以正确的配置这个请求对象的Header了，请求对象的Header是一个map对象，map对象的键是string字符串类型，值是string类型的切片，也就是说值可以有多个string值组成。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Header</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>][]<span style="color:#66d9ef">string</span>
+</code></pre></div><p>1.获取Header中的值</p>
+<p>req.Header.Get(&quot;&quot;)</p>
+<p>2.设置Header中的值</p>
+<p>req.Header.Set(&quot;&quot;)</p>
+<p>3.添加Header中的值</p>
+<p>req.Header.Add(&quot;&quot;)</p>
+<p>4.删除Header中的键值对</p>
+<p>req.Header.Del(&quot;&quot;)</p>
+<p>5.以有限格式写入Header</p>
+<p>req.Header.Write(&quot;&quot;)</p>
+<p>6.WriteSubset以有线格式将头域写入w。当exclude不为nil时，如果h的键值对的键在exclude中存在且其对应值为真，该键值对就不会被写入w。</p>
+<p>req.Header.WriteSubset(&quot;&quot;)</p>
+<h6 id="特殊的header-cookiesseesion以及token">
+  特殊的Header cookies，seesion以及token
+  <a class="anchor" href="#%e7%89%b9%e6%ae%8a%e7%9a%84header-cookiesseesion%e4%bb%a5%e5%8f%8atoken">#</a>
+</h6>
+<p>用户在输入用户名和密码之后，浏览器将用户名和密码发送给服务器，服务器进行验证，验证通过之后将用户信息加密后封装成Cookie放在请求头中返回给浏览器。浏览器收到服务器返回数据，发现请求头中有一个：Set-Cookie，然后它就把这个Cookie保存起来，下次浏览器再请求服务器的时候，会把Cookie也放在请求头中传给服务器：服务器收到请求后从请求头中拿到cookie，然后解析并到用户信息，说明此用户已登录，Cookie是将数据保存在客户端的。这里我们可以看到，用户信息是保存在Cookie中，也就相当于是保存在浏览器中，那就说用户可以随意修改用户信息，这是一种不安全的策略！强调一点：Cookie无论是服务器发给浏览器还是浏览器发给服务器，都是放在请求头中的</p>
+<p>cookie是指一个放置在一个Request请求对象中，Header中键为Cookie中的值或服务端回复的Header中键为Set-Cookie中的值。</p>
+<h5 id="3正确配置request对象的url">
+  3.正确配置Request对象的URL
+  <a class="anchor" href="#3%e6%ad%a3%e7%a1%ae%e9%85%8d%e7%bd%aerequest%e5%af%b9%e8%b1%a1%e7%9a%84url">#</a>
+</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">一个URL的基本格式如下</span><span style="color:#960050;background-color:#1e0010">：</span>
+<span style="color:#a6e22e">scheme</span>:<span style="color:#75715e">//[userinfo@]host/path[?query][#fragment]
+</span><span style="color:#75715e"></span>
+
+
+
+
+</code></pre></div><h5 id="4正确配置request对象的body体">
+  4.正确配置Request对象的body体
+  <a class="anchor" href="#4%e6%ad%a3%e7%a1%ae%e9%85%8d%e7%bd%aerequest%e5%af%b9%e8%b1%a1%e7%9a%84body%e4%bd%93">#</a>
+</h5>
+<h5 id="5创建一个client">
+  5.创建一个client
+  <a class="anchor" href="#5%e5%88%9b%e5%bb%ba%e4%b8%80%e4%b8%aaclient">#</a>
+</h5>
+<h5 id="6执行网络请求">
+  6.执行网络请求
+  <a class="anchor" href="#6%e6%89%a7%e8%a1%8c%e7%bd%91%e7%bb%9c%e8%af%b7%e6%b1%82">#</a>
+</h5>
+<h5 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h5>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+    
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://example.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/ru/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Russian
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/zh/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Chinese
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/3.%e5%b8%b8%e7%94%a8%e5%86%85%e7%bd%ae%e5%87%bd%e6%95%b0%e5%ba%93/2.%e7%bd%91%e7%bb%9c%e7%9b%b8%e5%85%b3%e7%9a%84%e5%87%bd%e6%95%b0%e5%ba%93/1.%e7%bd%91%e7%bb%9c%e8%af%b7%e6%b1%82/1.%e8%af%b7%e6%b1%82%e5%87%bd%e6%95%b0%e7%ae%80%e4%bb%8b.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

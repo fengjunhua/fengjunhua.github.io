@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2.函数,方法和接口s on devops</title>
+    <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/</link>
+    <description>Recent content in 2.函数,方法和接口s on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/1.%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/1.%E5%87%BD%E6%95%B0/</guid>
+      <description>一. 函数#二.函数传参#go语言中函数传参有三种形式，分别是变量传参，地址指针传参，以及可变参数传参。
+1.变量传参
+2.地址指针传参#地址指针传参套路
+使用地址指针类型的方式传参,形参肯定是地址,而且函数调用的时候传入的实参肯定也是地址,因为只有传入的参数的地址类型，才能获取到这个值进行操作。因为&amp;amp;T 是一个地址*t 是一个具体的值。func work(t &amp;amp;T){s := *t }预先将地址传入的方法
+type S struct { i int } func (p *S) Get() int { return p.i } 3.可变参数
+可变参数，所有的可变参数都是使用slice切片接收的。
+func myfunc(args ...int) { for _, v := range args { fmt.Println(v) } } 获取任意类型的可变参数
+func MyPrintf(args ...interface{}) { for _, arg := range args { switch arg.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/2.%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/2.%E6%96%B9%E6%B3%95/</guid>
+      <description>方法#方法简介#go语言中的struct结构体类似于面向对象中的类。在面向对象中，除了成员变量还有方法。
+在前面的函数中传参
+方法就是预先定义了接收者的函数。
+方法的一些注意事项#1.方法的所有者
+方法和函数的区别#其实方法本质上就是函数，只不过方法是关联到类型上的，可以通过关联的类型直接调用该实例的方法。
+值类型和指针类型的接收者#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/3.%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/3.%E6%8E%A5%E5%8F%A3/</guid>
+      <description>三. 接口#综上所述，使用方法有上述缺点，因此go语言提出了接口的概念以及go语言提倡面向接口的编程，每个接口都由数个方法组成，接口的定义格式如下：
+空接口#空接口是指没有定义任何方法的接口，因此任意类型都实现了空接口，空接口类型的变量可以存放任意类型的变量。
+空接口的应用#1.空接口作为函数的参数
+使用空接口可以接受任意类型的函数参数2.空接口作为map的值
+interface
+空接口非空接口#// runtimeruntimetype eface struct {_type *_typedata unsafe.Pointer}// 有方法的interfacetype iface struct {tab *itabdata unsafe.Pointer}// src\runtime\type.gotype itab struct {inter *interfacetype_type *_typelink *itabhash uint32bad boolinhash boolunused [2]bytefun [1]uintptr}// src\runtime\type.gotype interfacetype struct {typ _typepkgpath namemhdr []imethod}// interface数据类型对应的typetype _type struct {size uintptrptrdata uintptrhash uint32tflag tflagalign uint8fieldalign uint8kind uint8alg *typeAlggcdata *bytestr nameOffptrToThis typeOff}可以看到两种类型的接口在内部的实现都是定义了两个字段的结构体，所以任何一个interface变量都是占用16个byte的内存空间。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/4.%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/4.%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/5.%E5%8F%8D%E5%B0%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/5.%E5%8F%8D%E5%B0%84/</guid>
+      <description>反射#反射是什么#反射是指在程序运行期间对程序本身进行访问和修改的能力，
+任何接口值都是由一个具体的类型和具体类型的值两部分组成。go语言中反射的相关功能都是由内置的reflect包提供，任何接口值在反射中都可以理解为由reflect.Type和reflect.Value两部分组成，并且reflect包提供了reflect.TypeOf和reflect.ValueOf两个函数来获取任意对象的Value和Type。
+reflect实现了运行时的反射能力,
+go语言中，要判断两个值是否相等，一方面要判断他们的类型是否相等，另一方面需要判断他们的值是否相等，只有两者都是相等的，两个变量才是相等的。
+反射应用#reflect.TypeOf#reflect.Type也是一种类型，它是对象的,
+在反射中，每一种反射出来的Type是一个接口，里面又分为好几个字段
+.Kind
+.Name
+.
+reflect.Value#reflect.Value是一种类型，
+reflect.ValueOf#</description>
+    </item>
+    
+  </channel>
+</rss>

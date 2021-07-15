@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="swagger详情页的配置#当我们打开swagger界面时，swagger首先会对整个界面做一个描述，这个也称为swagger的详情页，swagger的详情页是在main函数中配置和定义的。
+   annotation 描述 举例     title Required. The title of the application. // @title Swagger Example API   version Required. Provides the version of the application API. // @version 1.0   description A short description of the application. // @description This is a sample server celler server.   tag.name Name of a tag. // @tag.name This is the name of the tag   tag.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="swagger详情页的配置#当我们打开swagger界面时，swagger首先会对整个界面做一个描述，这个也称为swagger的详情页，swagger的详情页是在main函数中配置和定义的。
+   annotation 描述 举例     title Required. The title of the application. // @title Swagger Example API   version Required. Provides the version of the application API. // @version 1.0   description A short description of the application. // @description This is a sample server celler server.   tag.name Name of a tag. // @tag.name This is the name of the tag   tag." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/2.main%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9A%E4%B9%89/" /><meta property="article:section" content="5.常用第三方模块" />
+
+
+
+<title>2.Main函数配置和定义 | devops</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e246e6a45b940b6ff71d8216783f10a80d910290a7c364c8bfd5d305d8545d62.css" integrity="sha256-4kbmpFuUC2/3HYIWeD8QqA2RApCnw2TIv9XTBdhUXWI=">
+<script defer src="/en.search.min.06c126bd879add8dfc6cf7dfef92762bf3de30b6b029e902278f9c0768b83575.js" integrity="sha256-BsEmvYea3Y38bPff75J2K/PeMLawKekCJ4&#43;cB2i4NXU="></script>
+
+<script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>devops</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e96617f4455376846834dea88b63c3b8" class="toggle"  />
+    <label for="section-e96617f4455376846834dea88b63c3b8" class="flex justify-between">
+      <a href="https://example.com/go/example/" class="">go语言基础教程</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/with-toc/" class="">With ToC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/without-toc/" class="">Without ToC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-89a07efdaa17fe57e683d64a53061a72" class="toggle"  />
+    <label for="section-89a07efdaa17fe57e683d64a53061a72" class="flex justify-between">
+      <a  class="">Collapsed</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/collapsed/3rd-level/" class="">3rd Level</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/collapsed/3rd-level/4th-level/" class="">4th Level</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/2.%E5%BE%AA%E7%8E%AF/" class="">go循环</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/katex/" class="">Katex</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-07f93371003cbe1967edc9403ddeae10" class="toggle"  />
+    <label for="section-07f93371003cbe1967edc9403ddeae10" class="flex justify-between">
+      <a href="https://example.com/go/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>2.Main函数配置和定义</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+            <li><a href="#using-markdown-descriptions">Using markdown descriptions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h5 id="swagger详情页的配置">
+  swagger详情页的配置
+  <a class="anchor" href="#swagger%e8%af%a6%e6%83%85%e9%a1%b5%e7%9a%84%e9%85%8d%e7%bd%ae">#</a>
+</h5>
+<p>当我们打开swagger界面时，swagger首先会对整个界面做一个描述，这个也称为swagger的详情页，swagger的详情页是在main函数中配置和定义的。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">annotation</th>
+<th>描述</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">title</td>
+<td><strong>Required.</strong> The title of the application.</td>
+<td>// @title Swagger Example API</td>
+</tr>
+<tr>
+<td style="text-align:left">version</td>
+<td><strong>Required.</strong> Provides the version of the application API.</td>
+<td>// @version 1.0</td>
+</tr>
+<tr>
+<td style="text-align:left">description</td>
+<td>A short description of the application.</td>
+<td>// @description This is a sample server celler server.</td>
+</tr>
+<tr>
+<td style="text-align:left">tag.name</td>
+<td>Name of a tag.</td>
+<td>// @tag.name This is the name of the tag</td>
+</tr>
+<tr>
+<td style="text-align:left">tag.description</td>
+<td>Description of the tag</td>
+<td>// @tag.description Cool Description</td>
+</tr>
+<tr>
+<td style="text-align:left">tag.docs.url</td>
+<td>Url of the external Documentation of the tag</td>
+<td>// @tag.docs.url <a href="https://example.com">https://example.com</a></td>
+</tr>
+<tr>
+<td style="text-align:left">tag.docs.description</td>
+<td>Description of the external Documentation of the tag</td>
+<td>// @tag.docs.description Best example documentation</td>
+</tr>
+<tr>
+<td style="text-align:left">termsOfService</td>
+<td>The Terms of Service for the API.</td>
+<td>// @termsOfService <a href="http://swagger.io/terms/">http://swagger.io/terms/</a></td>
+</tr>
+<tr>
+<td style="text-align:left">contact.name</td>
+<td>The contact information for the exposed API.</td>
+<td>// @contact.name API Support</td>
+</tr>
+<tr>
+<td style="text-align:left">contact.url</td>
+<td>The URL pointing to the contact information. MUST be in the format of a URL.</td>
+<td>// @contact.url <a href="http://www.swagger.io/support">http://www.swagger.io/support</a></td>
+</tr>
+<tr>
+<td style="text-align:left">contact.email</td>
+<td>The email address of the contact person/organization. MUST be in the format of an email address.</td>
+<td>// @contact.email <a href="mailto:support@swagger.io">support@swagger.io</a></td>
+</tr>
+<tr>
+<td style="text-align:left">license.name</td>
+<td><strong>Required.</strong> The license name used for the API.</td>
+<td>// @license.name Apache 2.0</td>
+</tr>
+<tr>
+<td style="text-align:left">license.url</td>
+<td>A URL to the license used for the API. MUST be in the format of a URL.</td>
+<td>// @license.url <a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a></td>
+</tr>
+<tr>
+<td style="text-align:left">host</td>
+<td>The host (name or ip) serving the API.</td>
+<td>// @host localhost:8080</td>
+</tr>
+<tr>
+<td style="text-align:left">BasePath</td>
+<td>The base path on which the API is served.</td>
+<td>// @BasePath /api/v1</td>
+</tr>
+<tr>
+<td style="text-align:left">query.collection.format</td>
+<td>The default collection(array) param format in query,enums:csv,multi,pipes,tsv,ssv. If not set, csv is the default.</td>
+<td>// @query.collection.format multi</td>
+</tr>
+<tr>
+<td style="text-align:left">schemes</td>
+<td>The transfer protocol for the operation that separated by spaces.</td>
+<td>// @schemes http https</td>
+</tr>
+<tr>
+<td style="text-align:left">x-name</td>
+<td>The extension key, must be start by x- and take only json value</td>
+<td>// @x-example-key {&ldquo;key&rdquo;: &ldquo;value&rdquo;}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="using-markdown-descriptions">
+  Using markdown descriptions
+  <a class="anchor" href="#using-markdown-descriptions">#</a>
+</h3>
+<p>When a short string in your documentation is insufficient, or you need images, code examples and things like that you may want to use markdown descriptions. In order to use markdown descriptions use the following annotations.</p>
+<table>
+<thead>
+<tr>
+<th>annotation</th>
+<th>description</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td><strong>Required.</strong> The title of the application.</td>
+<td>// @title Swagger Example API</td>
+</tr>
+<tr>
+<td>version</td>
+<td><strong>Required.</strong> Provides the version of the application API.</td>
+<td>// @version 1.0</td>
+</tr>
+<tr>
+<td>description.markdown</td>
+<td>A short description of the application. Parsed from the api.md file. This is an alternative to @description</td>
+<td>// @description.markdown No value needed, this parses the description from api.md</td>
+</tr>
+<tr>
+<td>tag.name</td>
+<td>Name of a tag.</td>
+<td>// @tag.name This is the name of the tag</td>
+</tr>
+<tr>
+<td>tag.description.markdown</td>
+<td>Description of the tag this is an alternative to tag.description. The description will be read from a file named like tagname.md</td>
+<td>// @tag.description.markdown</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th style="text-align:left">是否必须的</th>
+<th>变量含义</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td style="text-align:left">必须的</td>
+<td>整个应用项目的名称</td>
+<td>// @title Swagger Example API</td>
+</tr>
+<tr>
+<td>version</td>
+<td style="text-align:left">必须的</td>
+<td>项目API的版本</td>
+<td>// @version 1.0</td>
+</tr>
+<tr>
+<td>description</td>
+<td style="text-align:left"></td>
+<td>项目应用程序的简短的说明</td>
+<td>// @description This is a sample server celler server.</td>
+</tr>
+<tr>
+<td>tag.name</td>
+<td style="text-align:left"></td>
+<td>Name of a tag.</td>
+<td>// @tag.name This is the name of the tag</td>
+</tr>
+<tr>
+<td>tag.description</td>
+<td style="text-align:left"></td>
+<td>Description of the tag</td>
+<td>// @tag.description Cool Description</td>
+</tr>
+<tr>
+<td>tag.docs.url</td>
+<td style="text-align:left"></td>
+<td>Url of the external Documentation of the tag</td>
+<td>// @tag.docs.url <a href="https://example.com">https://example.com</a></td>
+</tr>
+<tr>
+<td>tag.docs.description</td>
+<td style="text-align:left"></td>
+<td>Description of the external Documentation of the tag</td>
+<td>// @tag.docs.description Best example documentation</td>
+</tr>
+<tr>
+<td>termsOfService</td>
+<td style="text-align:left"></td>
+<td>The Terms of Service for the API.</td>
+<td>// @termsOfService <a href="http://swagger.io/terms/">http://swagger.io/terms/</a></td>
+</tr>
+<tr>
+<td>contact.name</td>
+<td style="text-align:left"></td>
+<td>The contact information for the exposed API.</td>
+<td>// @contact.name API Support</td>
+</tr>
+<tr>
+<td>contact.url</td>
+<td style="text-align:left"></td>
+<td>The URL pointing to the contact information. MUST be in the format of a URL.</td>
+<td>// @contact.url <a href="http://www.swagger.io/support">http://www.swagger.io/support</a></td>
+</tr>
+<tr>
+<td>contact.email</td>
+<td style="text-align:left"></td>
+<td>The email address of the contact person/organization. MUST be in the format of an email address.</td>
+<td>// @contact.email <a href="mailto:support@swagger.io">support@swagger.io</a></td>
+</tr>
+<tr>
+<td>license.name</td>
+<td style="text-align:left">必须的</td>
+<td>该应用程序的api所使用的license协议名称</td>
+<td>// @license.name Apache 2.0</td>
+</tr>
+<tr>
+<td>license.url</td>
+<td style="text-align:left"></td>
+<td>A URL to the license used for the API. MUST be in the format of a URL.</td>
+<td>// @license.url <a href="http://www.apache.org/licenses/LICENSE-2.0.html">http://www.apache.org/licenses/LICENSE-2.0.html</a></td>
+</tr>
+<tr>
+<td>host</td>
+<td style="text-align:left"></td>
+<td>The host (name or ip) serving the API.</td>
+<td>// @host localhost:8080</td>
+</tr>
+<tr>
+<td>BasePath</td>
+<td style="text-align:left"></td>
+<td>The base path on which the API is served.</td>
+<td>// @BasePath /api/v1</td>
+</tr>
+<tr>
+<td>query.collection.format</td>
+<td style="text-align:left"></td>
+<td>The default collection(array) param format in query,enums:csv,multi,pipes,tsv,ssv. If not set, csv is the default.</td>
+<td>// @query.collection.format multi</td>
+</tr>
+<tr>
+<td>schemes</td>
+<td style="text-align:left">D</td>
+<td>The transfer protocol for the operation that separated by spaces.</td>
+<td>// @schemes http https</td>
+</tr>
+<tr>
+<td>x-name</td>
+<td style="text-align:left">D</td>
+<td>The extension key, must be start by x- and take only json value</td>
+<td>// @x-example-key {&ldquo;key&rdquo;: &ldquo;value&rdquo;}</td>
+</tr>
+</tbody>
+</table>
+<p>TAG相关</p>
+<pre><code>Tag.name                  main函数的标签名称
+Tag.description           main函数的描述
+Tag.docs.url
+Tag.docs.description
+</code></pre><p>contact相关</p>
+<pre><code>contact.name     联系人
+contact.url      联系人跳转的ULR
+contact.email    联系人的邮箱
+</code></pre><p>lisence证书相关</p>
+<pre><code>license.name
+license.url
+</code></pre><p>query.collection.format</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"></code></pre></div><p>使用markdown来进行标记描述</p>
+<h5 id="main函数定义">
+  main函数定义
+  <a class="anchor" href="#main%e5%87%bd%e6%95%b0%e5%ae%9a%e4%b9%89">#</a>
+</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// @title 定时任务管理系统
+</span><span style="color:#75715e">// @version 1.0
+</span><span style="color:#75715e">// @description 定时任务管理系统后端API接口文档
+</span><span style="color:#75715e">// @contact.name API Support
+</span><span style="color:#75715e">// @contact.url http://www.swagger.io/support
+</span><span style="color:#75715e">// @license.name Apache 2.0
+</span><span style="color:#75715e">// @license.url http://www.apache.org/licenses/LICENSE-2.0.html
+</span><span style="color:#75715e">// @host 127.0.0.1:8090
+</span><span style="color:#75715e">// @BasePath /api/v1
+</span></code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+    
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://example.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/ru/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Russian
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/zh/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Chinese
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/5.%e5%b8%b8%e7%94%a8%e7%ac%ac%e4%b8%89%e6%96%b9%e6%a8%a1%e5%9d%97/2.%20swagger/2.main%e5%87%bd%e6%95%b0%e9%85%8d%e7%bd%ae%e5%92%8c%e5%ae%9a%e4%b9%89.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+            <li><a href="#using-markdown-descriptions">Using markdown descriptions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

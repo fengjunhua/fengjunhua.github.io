@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>7. go rpcs on devops</title>
+    <link>https://example.com/7.-go-rpc/</link>
+    <description>Recent content in 7. go rpcs on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/7.-go-rpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/7.-go-rpc/1.protobuf%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/7.-go-rpc/1.protobuf%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+      <description>安装并配置protobuf命令#1.下载客户端命令:#https://github.com/protocolbuffers/protobuf/releases
+将下载后的
+放到
+输入protoc命令，即标识protoc命令已经安装完成。
+2.下载安装go语言可以调用protobuf命令的库
+go get github.com/golang/protobuf/protoc-gen-go 3.编写一个文件
+https://developers.google.cn/protocol-buffers/docs/proto3
+定义一个消息类型</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/7.-go-rpc/2.go-rpc%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/7.-go-rpc/2.go-rpc%E7%AE%80%E4%BB%8B/</guid>
+      <description>golang官方本身提供了rpc库，还有许多第三方库为golang提供了rpc支持，大部分第三方rpc库的实现都是通过protobuf进行数据编码，根据protobuf声明文件自动生成rpc方法定义与服务注册代码，在golang可以很方便的进行rpc服务调用。
+go语言自身的net/rpc库#</description>
+    </item>
+    
+  </channel>
+</rss>

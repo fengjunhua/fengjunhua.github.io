@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="单个api相关的注解
+   标记符号 描述     tags 每个api所属的大标签列表,可以有多个大标签,每个标签用逗号分隔。   summary 该api所操作的简短的说明,系统会将summary与router会自动结合起来   description A verbose explanation of the operation behavior.   description.markdown A short description of the application. The description will be read from a file named like endpointname.md   id A unique string used to identify the operation. Must be unique among all API operations.   accept A list of MIME types the APIs can consume.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="" />
+<meta property="og:description" content="单个api相关的注解
+   标记符号 描述     tags 每个api所属的大标签列表,可以有多个大标签,每个标签用逗号分隔。   summary 该api所操作的简短的说明,系统会将summary与router会自动结合起来   description A verbose explanation of the operation behavior.   description.markdown A short description of the application. The description will be read from a file named like endpointname.md   id A unique string used to identify the operation. Must be unique among all API operations.   accept A list of MIME types the APIs can consume." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/3.controller%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/" /><meta property="article:section" content="5.常用第三方模块" />
+
+
+
+<title>3.Controller函数配置 | devops</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.e246e6a45b940b6ff71d8216783f10a80d910290a7c364c8bfd5d305d8545d62.css" integrity="sha256-4kbmpFuUC2/3HYIWeD8QqA2RApCnw2TIv9XTBdhUXWI=">
+<script defer src="/en.search.min.06c126bd879add8dfc6cf7dfef92762bf3de30b6b029e902278f9c0768b83575.js" integrity="sha256-BsEmvYea3Y38bPff75J2K/PeMLawKekCJ4&#43;cB2i4NXU="></script>
+
+<script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>devops</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e96617f4455376846834dea88b63c3b8" class="toggle"  />
+    <label for="section-e96617f4455376846834dea88b63c3b8" class="flex justify-between">
+      <a href="https://example.com/go/example/" class="">go语言基础教程</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/" class="">Table of Contents</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/with-toc/" class="">With ToC</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/table-of-contents/without-toc/" class="">Without ToC</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-89a07efdaa17fe57e683d64a53061a72" class="toggle"  />
+    <label for="section-89a07efdaa17fe57e683d64a53061a72" class="flex justify-between">
+      <a  class="">Collapsed</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/collapsed/3rd-level/" class="">3rd Level</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/collapsed/3rd-level/4th-level/" class="">4th Level</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/example/2.%E5%BE%AA%E7%8E%AF/" class="">go循环</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Shortcodes</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/buttons/" class="">Buttons</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/columns/" class="">Columns</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/details/" class="">Details</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/expand/" class="">Expand</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/hints/" class="">Hints</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/katex/" class="">Katex</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/mermaid/" class="">Mermaid</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-07f93371003cbe1967edc9403ddeae10" class="toggle"  />
+    <label for="section-07f93371003cbe1967edc9403ddeae10" class="flex justify-between">
+      <a href="https://example.com/go/shortcodes/section/" class="">Section</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/section/first-page/" class="">First Page</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/section/second-page/" class="">Second Page</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://example.com/go/shortcodes/tabs/" class="">Tabs</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/alex-shpak/hugo-book" target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/" target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>3.Controller函数配置</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>单个api相关的注解</p>
+<table>
+<thead>
+<tr>
+<th>标记符号</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tags</td>
+<td>每个api所属的大标签列表,可以有多个大标签,每个标签用逗号分隔。</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>该api所操作的简短的说明,系统会将summary与router会自动结合起来</td>
+</tr>
+<tr>
+<td>description</td>
+<td>A verbose explanation of the operation behavior.</td>
+</tr>
+<tr>
+<td>description.markdown</td>
+<td>A short description of the application. The description will be read from a file named like endpointname.md</td>
+</tr>
+<tr>
+<td>id</td>
+<td>A unique string used to identify the operation. Must be unique among all API operations.</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>A list of MIME types the APIs can consume. Value MUST be as described under 
+  <a href="/#mime-types">Mime Types</a>.</td>
+</tr>
+<tr>
+<td>produce</td>
+<td>A list of MIME types the APIs can produce. Value MUST be as described under 
+  <a href="/#mime-types">Mime Types</a>.</td>
+</tr>
+<tr>
+<td>security</td>
+<td>
+  <a href="/#security">Security</a> to each API operation.</td>
+</tr>
+<tr>
+<td>header</td>
+<td>Header in response that separated by spaces. <code>return code</code>,<code>{param type}</code>,<code>data type</code>,<code>comment</code></td>
+</tr>
+<tr>
+<td>x-name</td>
+<td>The extension key, must be start by x- and take only json value.</td>
+</tr>
+<tr>
+<td>x-codeSample</td>
+<td>Optional Markdown usage. take <code>file</code> as parameter. This will then search for a file named like the summary in the given folder.</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>Mark endpoint as deprecated.</td>
+</tr>
+<tr>
+<td>param</td>
+<td>请求参数，Parameters that separated by spaces. <code>param name</code>,<code>param type</code>,<code>data type</code>,<code>is mandatory?</code>,<code>comment</code> <code>attribute(optional)</code></td>
+</tr>
+<tr>
+<td>response</td>
+<td>请求所返回的数据，跟success和failure相同。</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Success response that separated by spaces. <code>return code or default</code>,<code>{param type}</code>,<code>data type</code>,<code>comment</code>    请求成功所返回的数据</td>
+</tr>
+<tr>
+<td>failure</td>
+<td>Failure response that separated by spaces. <code>return code or default</code>,<code>{param type}</code>,<code>data type</code>,<code>comment</code> 请求失败所返回的数据</td>
+</tr>
+<tr>
+<td>router</td>
+<td>请求的路径URL，配置格式是路径加方法，路径和方法用空格隔开。<code>path</code>,<code>[httpMethod]</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mime-types">
+  Mime Types
+  <a class="anchor" href="#mime-types">#</a>
+</h4>
+<p>swag可以接受所有只要是正确格式的的MIME Types类型,也就是说可以接受匹配<code>*/*</code>的任意类型。 此外，swag还可以接收一些可以设置别名的MIME Types类型的数据，这些可以设置别名的MIME Types类型如下所示。</p>
+<table>
+<thead>
+<tr>
+<th>Alias</th>
+<th>MIME Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>json</td>
+<td>application/json</td>
+</tr>
+<tr>
+<td>xml</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>plain</td>
+<td>text/plain</td>
+</tr>
+<tr>
+<td>html</td>
+<td>text/html</td>
+</tr>
+<tr>
+<td>mpfd</td>
+<td>multipart/form-data</td>
+</tr>
+<tr>
+<td>x-www-form-urlencoded</td>
+<td>application/x-www-form-urlencoded</td>
+</tr>
+<tr>
+<td>json-api</td>
+<td>application/vnd.api+json</td>
+</tr>
+<tr>
+<td>json-stream</td>
+<td>application/x-json-stream</td>
+</tr>
+<tr>
+<td>octet-stream</td>
+<td>application/octet-stream</td>
+</tr>
+<tr>
+<td>png</td>
+<td>image/png</td>
+</tr>
+<tr>
+<td>jpeg</td>
+<td>image/jpeg</td>
+</tr>
+<tr>
+<td>gif</td>
+<td>image/gif</td>
+</tr>
+</tbody>
+</table>
+<h4 id="配置请求参数param">
+  配置请求参数param
+  <a class="anchor" href="#%e9%85%8d%e7%bd%ae%e8%af%b7%e6%b1%82%e5%8f%82%e6%95%b0param">#</a>
+</h4>
+<h5 id="1参数类型param-type">
+  1.参数类型Param Type
+  <a class="anchor" href="#1%e5%8f%82%e6%95%b0%e7%b1%bb%e5%9e%8bparam-type">#</a>
+</h5>
+<table>
+<thead>
+<tr>
+<th>请求参数类型</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>路径参数</td>
+</tr>
+<tr>
+<td>query</td>
+<td>查询参数</td>
+</tr>
+<tr>
+<td>header</td>
+<td>请求头参数</td>
+</tr>
+<tr>
+<td>body</td>
+<td>请求体参数</td>
+</tr>
+<tr>
+<td>formData</td>
+<td>请求form内的参数</td>
+</tr>
+</tbody>
+</table>
+<h5 id="2数据类型data-type">
+  2.数据类型Data Type
+  <a class="anchor" href="#2%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8bdata-type">#</a>
+</h5>
+<table>
+<thead>
+<tr>
+<th>参数数据类型</th>
+<th>注释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>string (string)</td>
+<td></td>
+</tr>
+<tr>
+<td>integer (int, uint, uint32, uint64)</td>
+<td></td>
+</tr>
+<tr>
+<td>number (float32)</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean (bool)</td>
+<td></td>
+</tr>
+<tr>
+<td>user defined struct</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="3配置举例">
+  3.配置举例
+  <a class="anchor" href="#3%e9%85%8d%e7%bd%ae%e4%b8%be%e4%be%8b">#</a>
+</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ae81ff">1.</span><span style="color:#a6e22e">配置path路径中的请求参数</span>
+<span style="color:#75715e">//@Param id path int true &#34;ID&#34;
+</span><span style="color:#75715e"></span>
+
+<span style="color:#ae81ff">2.</span><span style="color:#a6e22e">配置query查询参数</span>
+<span style="color:#75715e">//@Param 
+</span><span style="color:#75715e"></span>
+
+<span style="color:#ae81ff">3.</span><span style="color:#a6e22e">配置header中的参数</span>
+<span style="color:#75715e">//@Param 
+</span><span style="color:#75715e"></span>
+
+<span style="color:#ae81ff">4.</span><span style="color:#a6e22e">请求体body中的参数</span>
+<span style="color:#75715e">//@Param 
+</span><span style="color:#75715e"></span>
+
+<span style="color:#ae81ff">5.</span><span style="color:#a6e22e">配置form表单中的参数</span>
+<span style="color:#75715e">//@Param
+</span><span style="color:#75715e"></span>
+
+
+</code></pre></div><h4 id="配置返回参数">
+  配置返回参数
+  <a class="anchor" href="#%e9%85%8d%e7%bd%ae%e8%bf%94%e5%9b%9e%e5%8f%82%e6%95%b0">#</a>
+</h4>
+<p>与返回相关的参数: response,success,failure</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">response</span>: <span style="color:#a6e22e">与success成功和failure失败的配置一样</span><span style="color:#960050;background-color:#1e0010">。</span>
+<span style="color:#a6e22e">success</span>:  <span style="color:#a6e22e">成功返回的数据结构</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">由空格分隔的成功响应</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">返回状态码code或default的</span>
+<span style="color:#a6e22e">failure</span>:  <span style="color:#a6e22e">失败返回的数据结构</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">由空格分隔的失败响应</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">返回状态码code或default的</span>
+</code></pre></div><h5 id="controller函数配置和定义-相应的api接口定义">
+  controller函数配置和定义 相应的API接口定义
+  <a class="anchor" href="#controller%e5%87%bd%e6%95%b0%e9%85%8d%e7%bd%ae%e5%92%8c%e5%ae%9a%e4%b9%89-%e7%9b%b8%e5%ba%94%e7%9a%84api%e6%8e%a5%e5%8f%a3%e5%ae%9a%e4%b9%89">#</a>
+</h5>
+<pre><code>// @Tags    用户信息   //swagger API分类标签, 同一个tag为一组
+// @Summary 接口概要说明
+// @Description 接口详细描述信息
+// @accept json  //浏览器可处理数据类型，浏览器默认发 Accept: */*
+// @Produce  json  //设置返回数据的类型和编码
+// @Param id path int true &quot;ID&quot;    //url参数：（name；参数类型[query(?id=),path(/123)]；数据类型；required；参数描述）
+// @Param name query string false &quot;name&quot;
+// @Success 200 {object} Res {&quot;code&quot;:200,&quot;data&quot;:null,&quot;msg&quot;:&quot;&quot;}  //成功返回的数据结构， 最后是示例
+// @Failure 400 {object} Res {&quot;code&quot;:200,&quot;data&quot;:null,&quot;msg&quot;:&quot;&quot;}
+// @Router /test/{id} [get]    //路由信息,以及路由请求方法,一定要写上
+</code></pre><h5 id="heading">
+  
+  <a class="anchor" href="#heading">#</a>
+</h5>
+<h5 id="heading-1">
+  
+  <a class="anchor" href="#heading-1">#</a>
+</h5>
+<p>常见的参数举例：</p>
+<h5 id="2定义请求的参数">
+  2.定义请求的参数
+  <a class="anchor" href="#2%e5%ae%9a%e4%b9%89%e8%af%b7%e6%b1%82%e7%9a%84%e5%8f%82%e6%95%b0">#</a>
+</h5>
+<p>常见的请求的参数有path路径参数，query查询参数，header请求头参数，body请求体参数，formData请求的form表单中的参数。</p>
+<pre><code>//@
+</code></pre><h5 id="router路径配置">
+  router路径配置
+  <a class="anchor" href="#router%e8%b7%af%e5%be%84%e9%85%8d%e7%bd%ae">#</a>
+</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">[<span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">get</span><span style="color:#960050;background-color:#1e0010">&#39;</span>, <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">post</span><span style="color:#960050;background-color:#1e0010">&#39;</span>, <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">put</span><span style="color:#960050;background-color:#1e0010">&#39;</span>, <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">delete</span><span style="color:#960050;background-color:#1e0010">&#39;</span>, <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">patch</span><span style="color:#960050;background-color:#1e0010">&#39;</span>]
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+  
+
+
+
+  
+    
+  
+    
+  
+    
+  
+
+
+
+<div class="book-languages" tabindex="0" aria-haspopup="true">
+  <ul>
+    <li class="flex align-center">
+      <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+      English
+    </li> 
+  </ul>
+
+  <ul class="book-languages-list">
+    
+    <li class="active">
+      <a href="https://example.com/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        English
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/ru/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Russian
+      </a>
+    </li>
+    
+    <li class="">
+      <a href="https://example.com/zh/" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Chinese
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+  <div>
+    <a class="flex align-center" href="https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/content/5.%e5%b8%b8%e7%94%a8%e7%ac%ac%e4%b8%89%e6%96%b9%e6%a8%a1%e5%9d%97/2.%20swagger/3.controller%e5%87%bd%e6%95%b0%e9%85%8d%e7%bd%ae.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" class="book-icon" alt="Edit" />
+      <span>Edit this page</span>
+    </a>
+  </div>
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

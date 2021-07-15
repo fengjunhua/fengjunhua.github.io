@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>8. mysql数据库s on devops</title>
+    <link>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 8. mysql数据库s on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+      <description>连接msyql
+1.gorm驱动包的选择
+官网地址：https://github.com/go-gorm/gorm.git
+官方：https://gorm.io/
+import (&amp;quot;github.com/jinzhu/gorm&amp;quot;_ &amp;quot;github.com/go-sql-driver/mysql&amp;quot;)或者是:import (&amp;quot;github.com/jinzhu/gorm&amp;quot;_ &amp;quot;github.com/jinzhu/gorm/dialects/mysql&amp;quot;)注:github.com/go-sql-driver/mysql和github.com/jinzhu/gorm/dialects/mysql都为go连接mysql的驱动包,这两个使用哪个都可以,但必须使用一个。数据库连接池:gorm使用database/sql软件包来配置和维护数据库连接池import (_ &amp;quot;gorm.io/driver/mysql&amp;quot;&amp;quot;gorm.io/gorm&amp;quot;)import (_ &amp;quot;github.com/go-gorm/mysql&amp;quot;&amp;quot;github.com/go-gorm/gorm&amp;quot;)此时返回的是一个数据库的
+本地创建struct与表的关联
+因为前面已经创建了表关联，因此所有的对struct结构体的操作都会映射到相应的表结构上去，拥有的方法如下:
+Create</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/2.%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%85%B3%E8%81%94/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/2.%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%85%B3%E8%81%94/</guid>
+      <description>数据库模型可以使用的字段
+   标签名 标签含义     column 结构体在数据库表中的列名   primaryKey 指定列名是否为主键   unique 指定该列是否唯一   default 指定列的默认值   not null 指定列是否非空                    多个表之间相互关联的标签#多个表之间相互关联的标签
+   标签名 标签含义     foreignKey 指定当前模型的列是否为连接表的外键   references 指定引用表的列名，其将被映射为连接表外键   polymorphic 指定多态类型，比如模型名   polymorphicValue 指定多态值、默认表名   many2many 指定连接表表名   joinForeignKey 指定连接表的外键列名，其将被映射到当前表   joinReferences 指定连接表的外键列名，其将被映射到引用表   constraint 关系约束，例如：OnUpdate、OnDelete    数据库模型的定义:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/3.%E8%A1%A8%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/3.%E8%A1%A8%E6%93%8D%E4%BD%9C/</guid>
+      <description>由于前面已经创建了
+增加操作#更新
+批量添加记录
+删除操作#改操作#查询操作#</description>
+    </item>
+    
+  </channel>
+</rss>

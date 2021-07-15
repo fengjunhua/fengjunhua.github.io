@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on devops</title>
+    <link>https://example.com/</link>
+    <description>Recent content in Introduction on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>With ToC</title>
+      <link>https://example.com/go/example/table-of-contents/with-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/example/table-of-contents/with-toc/</guid>
+      <description>Caput vino delphine in tamen vias#Cognita laeva illo fracta#Lorem markdownum pavent auras, surgit nunc cingentibus libet Laomedonque que est. Pastor An arbor filia foedat, ne fugit aliter, per. Helicona illas et callida neptem est Oresitrophos caput, dentibus est venit. Tenet reddite famuli praesentem fortibus, quaeque vis foret si frondes gelidos gravidae circumtulit inpulit armenta nativum.
+ Te at cruciabere vides rubentis manebo Maturuit in praetemptat ruborem ignara postquam habitasse Subitarum supplevit quoque fontesque venabula spretis modo Montis tot est mali quasque gravis Quinquennem domus arsit ipse Pellem turis pugnabant locavit  Natus quaerere#Pectora et sine mulcere, coniuge dum tincta incurvae.</description>
+    </item>
+    
+    <item>
+      <title>Without ToC</title>
+      <link>https://example.com/go/example/table-of-contents/without-toc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/example/table-of-contents/without-toc/</guid>
+      <description>At me ipso nepotibus nunc celebratior genus#Tanto oblite#Lorem markdownum pectora novis patenti igne sua opus aurae feras materiaque illic demersit imago et aristas questaque posset. Vomit quoque suo inhaesuro clara. Esse cumque, per referri triste. Ut exponit solisque communis in tendens vincetis agisque iamque huic bene ante vetat omina Thebae rates. Aeacus servat admonitu concidit, ad resimas vultus et rugas vultu dignamque Siphnon.
+Quam iugulum regia simulacra, plus meruit humo pecorumque haesit, ab discedunt dixit: ritu pharetramque.</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://example.com/posts/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/creating-a-new-theme/</guid>
+      <description>Introduction#This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://example.com/posts/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/migrate-from-jekyll/</guid>
+      <description>Move static content to static#Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/▾ images/logo.png should become
+▾ &amp;lt;root&amp;gt;/▾ static/▾ images/logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://example.com/posts/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://example.com/posts/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/posts/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo#Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs#Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/1.hugo%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/1.hugo%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/</guid>
+      <description>项目官网地址:
+创建各个层级的目录
+config目录#hugo附带了大量的配置指令,config目录是将这些配置指令存储为JSON,YAML和TOML文件的地方.每一个根设置对象都可以配置成单独的文件,并且可以根据具体的环境进行优化，比如开发环境，测试环境，生产环境等.当我们只需要一个简单的环境而不需要使用这么多的配置，并且也不需要配置多个环境的时候，我们可以使用一个root根目录下的一个单独的config.toml文件作为配置。 许多网站可能不需要什么配置，但Hugo提供了大量的配置指令，用于更精细地指导Hugo如何构建网站。注意：默认情况下不创建配置目录。 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/</guid>
+      <description>hugo是主要的命令，用来构建我们的网站
+使用方法
+hugo [flags] hugo [command] hugo [command] [flags] 常用的命令主要有:
+new: server: config: 打印网站的配置 convert: 转换网站的content内容到不同的形式 deploy: 部署网站到云环境 env: 打印hugo的版本的环境变量 gen: help: import: list: mod: version: 常用的选项参数主要有:
+-b, --baseURL string -D, --buildDrafs创建一个新的网站#hugo new site &amp;lt;网站名字&amp;gt; 生成静态目录#hugo</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/3.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/3.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/</guid>
+      <description>配置文件详解
+如何配置hugo网站呢?
+配置文件:
+hugo使用config.
+配置目录#除了使用单个站点配置文件外，还可以使用configDir目录（默认为config/）来维护更简单的组织和特定于环境的设置。
+1. 2.theme主题 dataDir = &amp;#34;&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/4.%E9%83%A8%E7%BD%B2%E5%88%B0githubpages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/4.%E9%83%A8%E7%BD%B2%E5%88%B0githubpages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/1.%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/1.%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>基本数据类型#布尔类型#数字类型#在计算机语言中，都是使用0和1表示的
+   数字类型 类型和描述 特殊类型及用处     int8 有符号 8 位整型 (-128 到 127)    int16 有符号 16 位整型 (-32768 到 32767) 也是特殊类型rune   int32 有符号 32 位整型 (-2147483648 到 2147483647)    int64 有符号 64 位整型 (-9223372036854775808 到 9223372036854775807)    uint8 无符号 8 位整型 (0 到 255) 也是特殊类型byte   uint16 无符号 16 位整型 (0 到 65535)    unit32 无符号 32 位整型 (0 到 4294967295)    uint64 无符号 64 位整型 (0 到 18446744073709551615)     高级一点的数据类型</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/10.new%E5%92%8Cmake/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/10.new%E5%92%8Cmake/</guid>
+      <description>new和make的区别#值类型和引用类型#1. 什么是值类型，什么是引用类型？为什么要定义值类型，以及为什么要定义引用类型，以及值类型和引用类型的区别？#主要是为了方便内存的管理，防止内存空间泄露因为值类型再怎么定义，内存总是有限的，而引用类型有可能稍不注意就引发内存溢出。对于值类型的变量,我们不需要为它分配内存空间,是因为系统已经默认帮我们分配好了内存空间，对于引用类型的变量,我们不仅要声明变量,还要为它分配内存空间。值类型和引用类型的区别首先go语言的变量分为两种类型，一种是值类型，一种是引用类型。
+为什么要区分值类型和引用类型呢?
+为什么要使用new和make
+变量的声明过程中new和make的区别，new和make是go语言内置的两个函数，也就是说是拿来就可以使用的函数，主要用来为变量创建内存空间。
+值类型的变量: bool,int, float , string ,array,struct 引用类型的变量: slice切片 map 指针 interface channel 类型展示：
+   类型 变量类型 零值 为什么是值类型,以及为什么是引用了类型的原因     值类型 bool false     int 0     float 0     string &amp;quot;&amp;quot;     array      struct {}    引用类型 slice nil     map nil     ptr指针 nil     channel nil     interface nil     引用类型的声明和定义#make和new都是go语言内建的两个函数，这两个函数都是在src\builtin\builtin.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/3.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/3.%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</guid>
+      <description>for循环#go语言的for循环有3种形式
+ 和c的for一样  for{} for condition{}
+    最常用的几种形式
+  for key,value := range map{ } </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/5.%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/5.%E6%95%B0%E7%BB%84/</guid>
+      <description>数组#数组#数组是同一种数据类型的元素的集合，
+var 数组名 [3]int
+数组的初始化#数组数据的访问#数组的遍历#数组的遍历有两种方法:
+方法一: for循环遍历
+for i:= 0; i&amp;lt; len(a); i++ {fmt.Println(i)fmt.Println(a[i])}方法二：for &amp;hellip; range遍历
+for index,value := range a {fmt.Println(index)fmt.Println(value)}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/6.%E5%88%87%E7%89%87/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/6.%E5%88%87%E7%89%87/</guid>
+      <description>切片#切片#go预言切片是对数组的抽象，go语言数组的长度是不可改变的，在特定场景中这样的集合就不太适用，
+切片的定义#切片的声明#var sliceName []sliceType注: sliceName表示要声明的切片的名称sliceType表示切片中要存储的数据类型。举例:1.声明一个存放var a []int2.声明存放一个string字符串类型的切片var a []string切片的初始化#切片的容量和长度#切片的内置方法
+ len() cap() append() copy()  向切片中添加一个或多个数据
+向切片中添加一个或多个数据可以使用go语言内建的append()的函数,该函数可以为切片动态添加元素，可以一次添加一个元素,也可以一次添加多个元素, var a []int a = append(a,1) a = append(a,1,2,3) 读取切片中的值#读取切片中的值
+func main() {s := []int{1, 3, 5}for i := 0; i &amp;lt; len(s); i++ {fmt.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/7.map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/7.map/</guid>
+      <description>map#map的初始化
+map需要使用make来进行初始化，不能使用new进行初始化。删除map中的值
+delete(map,key)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/8.%E7%BB%93%E6%9E%84%E4%BD%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/8.%E7%BB%93%E6%9E%84%E4%BD%93/</guid>
+      <description>struct结构体#结构体数组#结构体数组是我们
+常见的使用方法#1.结构体与各种数据的映射，包括直接映射为json数据，配置文件映射，作为数据配置和解析的
+2.结构体和数据库对象的映射
+3.
+4.结构体作为对象进行实例化
+1. 结构体实例化#4.与配置文件映射，比如json，yaml等#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/9.init%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/9.init%E5%87%BD%E6%95%B0/</guid>
+      <description>init函数
+go语言中有一个特殊的函数，init函数，这个init函数是go编译器自动识别的，用于一些初始化的工作，init函数
+init函数常见的使用场景#定义一个全局变量当我们在使用数据库或日志函数的时候，经常需要定义一个全局变量来进行初始化
+定义一个全局变量#除了前面我们提到的，我们可以使用init函数来执行一些列的初始化操作，完成一系列的初始化任务，
+1.同一个包中的init函数
+当同一个包中需要一个实例化的变量的时候2.引入一个公共包中的init函数的时候
+公共的包中需要定义一个</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/1.%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/1.%E5%87%BD%E6%95%B0/</guid>
+      <description>一. 函数#二.函数传参#go语言中函数传参有三种形式，分别是变量传参，地址指针传参，以及可变参数传参。
+1.变量传参
+2.地址指针传参#地址指针传参套路
+使用地址指针类型的方式传参,形参肯定是地址,而且函数调用的时候传入的实参肯定也是地址,因为只有传入的参数的地址类型，才能获取到这个值进行操作。因为&amp;amp;T 是一个地址*t 是一个具体的值。func work(t &amp;amp;T){s := *t }预先将地址传入的方法
+type S struct { i int } func (p *S) Get() int { return p.i } 3.可变参数
+可变参数，所有的可变参数都是使用slice切片接收的。
+func myfunc(args ...int) { for _, v := range args { fmt.Println(v) } } 获取任意类型的可变参数
+func MyPrintf(args ...interface{}) { for _, arg := range args { switch arg.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/2.%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/2.%E6%96%B9%E6%B3%95/</guid>
+      <description>方法#方法简介#go语言中的struct结构体类似于面向对象中的类。在面向对象中，除了成员变量还有方法。
+在前面的函数中传参
+方法就是预先定义了接收者的函数。
+方法的一些注意事项#1.方法的所有者
+方法和函数的区别#其实方法本质上就是函数，只不过方法是关联到类型上的，可以通过关联的类型直接调用该实例的方法。
+值类型和指针类型的接收者#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/3.%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/3.%E6%8E%A5%E5%8F%A3/</guid>
+      <description>三. 接口#综上所述，使用方法有上述缺点，因此go语言提出了接口的概念以及go语言提倡面向接口的编程，每个接口都由数个方法组成，接口的定义格式如下：
+空接口#空接口是指没有定义任何方法的接口，因此任意类型都实现了空接口，空接口类型的变量可以存放任意类型的变量。
+空接口的应用#1.空接口作为函数的参数
+使用空接口可以接受任意类型的函数参数2.空接口作为map的值
+interface
+空接口非空接口#// runtimeruntimetype eface struct {_type *_typedata unsafe.Pointer}// 有方法的interfacetype iface struct {tab *itabdata unsafe.Pointer}// src\runtime\type.gotype itab struct {inter *interfacetype_type *_typelink *itabhash uint32bad boolinhash boolunused [2]bytefun [1]uintptr}// src\runtime\type.gotype interfacetype struct {typ _typepkgpath namemhdr []imethod}// interface数据类型对应的typetype _type struct {size uintptrptrdata uintptrhash uint32tflag tflagalign uint8fieldalign uint8kind uint8alg *typeAlggcdata *bytestr nameOffptrToThis typeOff}可以看到两种类型的接口在内部的实现都是定义了两个字段的结构体，所以任何一个interface变量都是占用16个byte的内存空间。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/4.%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/4.%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/5.%E5%8F%8D%E5%B0%84/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/2.%E5%87%BD%E6%95%B0%E6%96%B9%E6%B3%95%E5%92%8C%E6%8E%A5%E5%8F%A3/5.%E5%8F%8D%E5%B0%84/</guid>
+      <description>反射#反射是什么#反射是指在程序运行期间对程序本身进行访问和修改的能力，
+任何接口值都是由一个具体的类型和具体类型的值两部分组成。go语言中反射的相关功能都是由内置的reflect包提供，任何接口值在反射中都可以理解为由reflect.Type和reflect.Value两部分组成，并且reflect包提供了reflect.TypeOf和reflect.ValueOf两个函数来获取任意对象的Value和Type。
+reflect实现了运行时的反射能力,
+go语言中，要判断两个值是否相等，一方面要判断他们的类型是否相等，另一方面需要判断他们的值是否相等，只有两者都是相等的，两个变量才是相等的。
+反射应用#reflect.TypeOf#reflect.Type也是一种类型，它是对象的,
+在反射中，每一种反射出来的Type是一个接口，里面又分为好几个字段
+.Kind
+.Name
+.
+reflect.Value#reflect.Value是一种类型，
+reflect.ValueOf#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%96%87%E4%BB%B6io%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%96%87%E4%BB%B6io%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C/</guid>
+      <description>go常用的语言包
+1.[]byte操作2.buffer操作3.文件操作1.os 2.io 3.io/ioutils 4.buffers 最底层的
+1. 使用os包对文件进行操作#2. 文件操作的进一步升级#io软件包
+3. 文件操作的进一步抽象#buffers#[]byte类型转
+string类型转</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/2.%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/2.%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</guid>
+      <description>fmt标准库是我们在学习go语言的过程中接触的最早也是使用最频繁的一个函数库了，接下来我们讲解一下fmt函数库中常用的一些函数。
+fmt#fmt包实现了标准的格式化输入和格式化的输出打印。
+格式化输入#fmt.Scan#fmt.Scanf#fmt.Scanf不同于fmt.Scan简单的以空格作为输入数据的分隔符，fmt.Scanf为输入数据指定了具体的输入内容格式，只有按照格式输入数据才会被扫描并存入对应的变量。
+ 标准输入# 一系列的函数可以扫描格式化文本
+Scan : Scan从标准输入中读取字符串,将成功读取到的字符串保存到指定的变量,以空格或换行为分隔符,换行为停止输入。Scanln : 从标准输入中读取字符串，并将成功读取到的字符串保存到指定的变量，Scanf : 从标准输入中读取文本，从字符串中输入
+SscanSscanlnSscanf从文件中输入
+FscanFscanlnFscanf标准输出# PrintPrintlnPrintfSprintSprintlnSprintfFprintFprintlnFprintf</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/3.%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/3.%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</guid>
+      <description>获取命令行参数有三种方式
+1.os.args[]
+2.flag
+3.corba
+1. os.args[]#2. flag#当我们运行go语言程序的时候，flag包实现了命令行参数的解析，当开始使用flag包的时候，需要将
+type Flag struct { Name string // flag在命令行中的名字  Usage string // 帮助信息  Value Value // 要设置的值  DefValue string // 默认值（文本格式），用于使用信息 } import &amp;quot;flag&amp;quot;// 等所有的flag都注册完了以后,需要flag.Parse()接收int类型信息:
+3.命令行库corba#github地址:
+https://github.com/spf13/cobra</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/4.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/1.%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/4.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/1.%E8%AF%B7%E6%B1%82%E5%87%BD%E6%95%B0%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/1.%E8%AF%B7%E6%B1%82%E5%87%BD%E6%95%B0%E7%AE%80%E4%BB%8B/</guid>
+      <description>使用go语言发送http请求#常用的有GET,POST,PUT,DELETE,PATCH等操作
+1.request 2.header 3.url 4.body 5.初始化一个client 6.发送网络请求 7.解析结果 1.创建并封装一个request对象#1.1 Request对象简介和分析#request是一个结构体对象，它不仅在client请求端使用，有时候也需要在服务端使用。 1.2 创建一个Request结构体对象#func NewRequest(method, urlStr string, body io.Reader) (*Request, error)参数详解:method可以是http请求的任何方法，比如：GET,POST,PUT,DELET,PATCH,HEAD等方法。url是一个请求路径:body,如果body参数实现了io.Closer接口，Request返回值的Body 字段会被设置为body，并会被Client类型的Do、Post和PostFOrm方法以及Transport.RoundTrip方法关闭。此时，我们就创建好一个Request请求对象了，但是一个完整正确的Request对象不仅仅只是实例化就完成了，还必须配置好正确的Header，正确完成的URL请求路径，并且配置好正确的body请求体，至于cookies和sessions的配置是在服务端完成的。等完成Request对象以后，我们就可以把这个request对象发送给服务端了。
+2.配置Request对象的Header，向Request的Header中添加相应的键值对#当我们使用http的NewRequest方法创建好了一个request请求对象以后，就可以正确的配置这个请求对象的Header了，请求对象的Header是一个map对象，map对象的键是string字符串类型，值是string类型的切片，也就是说值可以有多个string值组成。
+type Header map[string][]string 1.获取Header中的值
+req.Header.Get(&amp;quot;&amp;quot;)
+2.设置Header中的值
+req.Header.Set(&amp;quot;&amp;quot;)
+3.添加Header中的值
+req.Header.Add(&amp;quot;&amp;quot;)
+4.删除Header中的键值对
+req.Header.Del(&amp;quot;&amp;quot;)
+5.以有限格式写入Header
+req.Header.Write(&amp;quot;&amp;quot;)
+6.WriteSubset以有线格式将头域写入w。当exclude不为nil时，如果h的键值对的键在exclude中存在且其对应值为真，该键值对就不会被写入w。
+req.Header.WriteSubset(&amp;quot;&amp;quot;)
+特殊的Header cookies，seesion以及token#用户在输入用户名和密码之后，浏览器将用户名和密码发送给服务器，服务器进行验证，验证通过之后将用户信息加密后封装成Cookie放在请求头中返回给浏览器。浏览器收到服务器返回数据，发现请求头中有一个：Set-Cookie，然后它就把这个Cookie保存起来，下次浏览器再请求服务器的时候，会把Cookie也放在请求头中传给服务器：服务器收到请求后从请求头中拿到cookie，然后解析并到用户信息，说明此用户已登录，Cookie是将数据保存在客户端的。这里我们可以看到，用户信息是保存在Cookie中，也就相当于是保存在浏览器中，那就说用户可以随意修改用户信息，这是一种不安全的策略！强调一点：Cookie无论是服务器发给浏览器还是浏览器发给服务器，都是放在请求头中的
+cookie是指一个放置在一个Request请求对象中，Header中键为Cookie中的值或服务端回复的Header中键为Set-Cookie中的值。
+3.正确配置Request对象的URL#一个URL的基本格式如下： scheme://[userinfo@]host/path[?query][#fragment]  4.正确配置Request对象的body体#5.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/2.%E9%80%9A%E7%94%A8%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/2.%E9%80%9A%E7%94%A8%E6%93%8D%E4%BD%9C/</guid>
+      <description>通用网络请求操作#目前GO语言只对GET,POST,POSTFORM,HEAD进行了封装，其他的像PUT，PATCH等操作只能用通用的DO方法进行请求。
+1. 通用的http请求函数使用#1.1 通用的http请求函数分析#1.2 通用的http请求函数封装#1.3 通用的http请求函数使用#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/3.GET%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/3.GET%E6%93%8D%E4%BD%9C/</guid>
+      <description>封装一个GET请求#使用通用的方法封装一个GET请求
+通用GET操作
+package mainimport (&amp;quot;bytes&amp;quot;&amp;quot;encoding/json&amp;quot;&amp;quot;io&amp;quot;&amp;quot;io/ioutil&amp;quot;&amp;quot;net/http&amp;quot;&amp;quot;time&amp;quot;)// 发送GET请求// url： 请求地址// response： 请求返回的内容func Get(url string) string {// 超时时间：5秒client := &amp;amp;http.Client{Timeout: 5 * time.Second}resp, err := client.Get(url)if err != nil {panic(err)}defer resp.Body.Close()var buffer [512]byteresult := bytes.NewBuffer(nil)for {n, err := resp.Body.Read(buffer[0:])result.Write(buffer[0:n])if err != nil &amp;amp;&amp;amp; err == io.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/4.POST%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/4.POST%E6%93%8D%E4%BD%9C/</guid>
+      <description>使用客户端进行POST请求操作#一. 使用通用方法封装(对于GO语言来说建议使用这种方法,因为节省精力)#1.创建一个request
+2.创建一个client
+3.进行post请求操作
+二. 直接使用封装好的POST (对于GO语言来说不常用,也不建议)#// 发送POST请求// url： 请求地址// data： POST请求提交的数据// contentType： 请求体格式，如：application/json// content： 请求放回的内容func Post(url string, data interface{}, contentType string) string {// 超时时间：5秒client := &amp;amp;http.Client{Timeout: 5 * time.Second}jsonStr, _ := json.Marshal(data)resp, err := client.Post(url, contentType, bytes.NewBuffer(jsonStr))if err != nil {panic(err)}defer resp.Body.Close()result, _ := ioutil.ReadAll(resp.Body)return string(result)}</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/5.PUT%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/5.PUT%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/6.DELETE%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/6.DELETE%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/7.PATCH%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/7.PATCH%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/8.HEAD%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/3.%E5%B8%B8%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BA%93/2.%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9A%84%E5%87%BD%E6%95%B0%E5%BA%93/1.%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/8.HEAD%E6%93%8D%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/1.goroutine%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/1.goroutine%E7%AE%80%E4%BB%8B/</guid>
+      <description>goroutine源码解析#调度相关的数据结构有三个,M(线程)，P(调度器)，G(goroutine)
+sync包控制的
+写法套路#func work(){ for{ seletct: case: case: default: case: return } } 必须有一个退出机制，也就是说必须有一个case需要触发return函数。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/2.%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%A5%97%E8%B7%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/2.%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%A5%97%E8%B7%AF/</guid>
+      <description>并发控制套路#并发的目的是实现我们想要的功能
+1.单纯的并发，也是最原始的并发，单纯的只是执行一定数量的函数#概述: 实现原理和思路
+实现函数func work()
+调用方式
+2.不限定并发的次数，但是多个函数调用的情况，sync包实现
+3.长期监听，但是满足一定的条件才能执行
+4.通过context函数控制work函数的执行。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/4.channel%E5%B9%B6%E5%8F%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/4.channel%E5%B9%B6%E5%8F%91/</guid>
+      <description>date: &amp;quot;2015-10-25 T 08:36:54-07:00&amp;quot; title: &amp;quot;channel并发&amp;quot; draft: falsechannel并发#通道(channel)是go语言中的一个核心类型，是用来传递数据的一个数据结构，通过它
+channel是一种指针类型的数据结构，通过make来分配内存。
+ch := make(chan int) channel#ch &amp;lt;- v读取channel中的值#循环遍历channel
+使用for &amp;hellip; range语句可以循环遍历channel中的值：
+select取值
+timeout超时处理
+select有一个很重要的作用就是超时处理,
+Timer和Ticker#5. close关闭channel#6. channel同步#channel可以处理
+channel常见的使用方法#1. 单个channel，一个函数用来写，一个函数用来读#2.多个channel#for{}3.select语句#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/5.context%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/5.context%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/</guid>
+      <description>context上下文#为什么需要使用context，及context的结构#对于服务器传入的请求需要创建上下文，
+Background()
+TODO()
+context接口分析
+根context#获取一个根context有两种方式，分别是调用调用context包中的background()方法和调用todo()方法。
+子context#子context有四种，分别是
+他们都是使用context包的四个with函数来获取的，
+带有cancel函数的子context#WithCancel
+2. 带有deadline函数的子context#2.1源码分析#// func WithDeadline(parent Context, d time.Time) (Context, CancelFunc) 1.带有deadline函数的子context是使用context包的WithDeadline()函数来获取的
+2.
+3.
+调用如下
+流程分析
+取消结束
+3. 带有timeout函数的子context#// func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc) { return WithDeadline(parent, time.Now().Add(timeout)) } 1.context包的WithTimeout()函数接收一个
+4. 带有value函数的子context#WithValue</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/1.log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/1.log/</guid>
+      <description>go语言标准日志库log#go语言内置的log包实现了简单的日志服务，使用go语言原生的log日志函数，最大的优点就是使用非常简单，我们可以设置任何io.Writer作为日志记录输出并向其发送任何想要发送的日志数据。
+log包定义了logger类型的结构体，可以通过调用该实例的，主要提供了3种接口，分别是&amp;quot;Print&amp;quot;,
+&amp;ldquo;Panic&amp;rdquo;,&amp;ldquo;Fatal&amp;rdquo;，对于每一种接口，都提供了三种调用方式，分别是&amp;quot;Print&amp;quot;,&amp;ldquo;Printf&amp;rdquo;,&amp;ldquo;Println&amp;quot;打印，基本和fmt中的
+函数类似。
+基本用法# Print级别的日志，(log.Print|log.Printf|log.Println) : 打印日志，和fmt包每什么区别，只是前面加上了日志的格式。 Fatal级别的日志，(log.Fatal|log.Fatalf|log.Fatalln) ：  Fatal系列
+log#配置logger
+默认情况下logger只会提供日志的时间信息，但是很多情况下，我们为了，记录日志的文件名和行号等。
+log标准库中的Flags函数
+log标准库提供了如下的flag选项，他们是一系列定义好的常量
+原生log日志库的配置#默认情况下，go的原生log日志只会增加打印日志的日期和时间信息，但是很多情况下，为了更好的分析应用程序，增加日志的可读性，我们经常需要添加一些额外的其他信息，比如日志的文件名和行号等。log原生日志库为我们提供了这些设置的方法。
+1. 配置日志的打印信息#func SetFlags(flag int)func Flags() intlog标准日志库为我们提供了如下一些现有的配置选项
+Ldate: 增加打印日期，格式： 2009/01/23Ltime: 增加打印时间，格式： 01:23:23Lmicroseconds Llongfile LshortfileLUTC: 使用UTC时间LstdFlags一般来说，我们使用这些
+2. 配置日志的前缀#我们可以使用调用log.SetPrefix()函数来
+func SetPrefix(prefix string)func Prefix() string3.配置日志的输出位置#func SetOutput(w io.Writer)4.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/2.zap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/2.zap/</guid>
+      <description>zap日志库
+前面我们已经介绍了go语言中原生log日志函数库的使用，正常情况下，我们不会使用go语言的原生日志函数，而是使用第三方的日志函数库。
+使用#zap提供了两种类型的日志记录器，传统的日志记录器Logger和Sugared Logger，在每一微妙和每一次内存分配都很重要的上下文中，使用Logger,他比Sugared Logger更快，内存分配次数更少也更节约内存空间，但它只支持强类型的结构化日志记录。
+1. 传统的logger记录器#1.1声明一个logger#我们可以使用zap.NewDevelopment()/zap.NewProduction()或着zap.NewExample创建一个logger,返回的是一个*zap.Logger的指针对象。 使用logger可以调用 默认情况下所有的日志都会输出打印到程序的console界面。 日志记录器的语法格式是这样的: func (log *Logger) MethodXXX(msg string,fields ... Field) 将日志写入文件
+默认情况下，zap是将日志输出到控制台终端，正常情况下，我们需要将日志写入到文件
+func New(core zapcore.Core, options ...Option) *Logger func NewCore(enc Encoder, ws WriteSyncer, enab LevelEnabler) Corezapcore.Core需要使用三个配置 --- Encoder,WriteSyncer,LogLevel1.Encoder:编码器,如何写入日志的,我们将使用开箱即用的zapcore.NewJSONEncoder(zap.NewDevelopmentEncoderConfig())2.WriterSyncer: 指定日志将写入到哪里去,file,2. Sugared Logger#我们也可以使用Sugared Logger来实现相同的功能。
+Sugared Logger和传统的logger大部分的实现基本相同，唯一的区别是
+3. 定制一个我们想要的logger函数#前面我们已经介绍了传统的logger函数的使用方法，此时生成的logger是使用默认的zap函数创建的，但是很多情况下，我们不能使用默认的zap函数创建的logger，我们需要根据自己的实际情况定制一个属于我们自己的logger函数，比如，我们需要把日志输出到特定的文件，而不是打印到应用程序控制台。
+使用1.定义日志输出的文件2.定义日志的编码格式3.定义日志的输出级别4.定义日志的前缀时间格式5.定义日志的切割定制logger: 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/3.%E4%BD%BF%E7%94%A8zap%E6%8E%A5%E5%8F%97gin%E6%A1%86%E6%9E%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/3.%E4%BD%BF%E7%94%A8zap%E6%8E%A5%E5%8F%97gin%E6%A1%86%E6%9E%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E6%97%A5%E5%BF%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/1.swagger%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/1.swagger%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</guid>
+      <description>生成swageer文档#官方文档:
+https://github.com/swaggo/swag/blob/master/README.md 1. 首先下载swag命令go get -u github.com/swaggo/swag/cmd/swag下载完成后将$GOPATH/bin/添加到Path环境变量,此时会在GOPATH下的bin目录下生成一个swag.exe文件，把$GOPATH/bin/添加到Path环境变量才能调用swag命令,然后在项目的根目录下执行swag命令,也就是说项目的main.go函数的相同目录下执行命令:swag init2.此时会在根目录下生成docs目录,内含三个文件:docs.goswagger.jsonswagger.yam3.下载gin-swagger软件包go get -u github.com/swaggo/gin-swaggergo get -u github.com/swaggo/files4.然后在项目中引入swagger软件包,并导入新生成的docs目录import (swaggerFiles &amp;quot;github.com/swaggo/files&amp;quot;ginSwagger &amp;quot;github.com/swaggo/gin-swagger&amp;quot;_ &amp;quot;github/fengjunhua/cronjobs/docs&amp;quot;)url := ginSwagger.URL(&amp;quot;http://localhost:8090/swagger/doc.json&amp;quot;)router.GET(&amp;quot;/swagger/*any&amp;quot;, ginSwagger.WrapHandler(swaggerFiles.Handler,url))5.重新生成swagger文档,并本地访问swag inithttp://localhost:8090/swagger/index.htmlswag命令详解#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/2.main%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9A%E4%B9%89/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/2.main%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9A%E4%B9%89/</guid>
+      <description>swagger详情页的配置#当我们打开swagger界面时，swagger首先会对整个界面做一个描述，这个也称为swagger的详情页，swagger的详情页是在main函数中配置和定义的。
+   annotation 描述 举例     title Required. The title of the application. // @title Swagger Example API   version Required. Provides the version of the application API. // @version 1.0   description A short description of the application. // @description This is a sample server celler server.   tag.name Name of a tag. // @tag.name This is the name of the tag   tag.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/3.controller%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/3.controller%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/</guid>
+      <description>单个api相关的注解
+   标记符号 描述     tags 每个api所属的大标签列表,可以有多个大标签,每个标签用逗号分隔。   summary 该api所操作的简短的说明,系统会将summary与router会自动结合起来   description A verbose explanation of the operation behavior.   description.markdown A short description of the application. The description will be read from a file named like endpointname.md   id A unique string used to identify the operation. Must be unique among all API operations.   accept A list of MIME types the APIs can consume.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/4.-%E8%AF%BB%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/1.%E4%BD%BF%E7%94%A8os.args%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/4.-%E8%AF%BB%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/1.%E4%BD%BF%E7%94%A8os.args%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/5.-%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0/1.viper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/5.-%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0/1.viper/</guid>
+      <description>go语言配置管理神器 &amp;ndash; Viper#读取配置文件#viper仅需要一个很少的配置,因为viper也需要知道配置从哪里读取配置文件，viper支持JSON，TOML,YAML,HCL,INI,envfile以及Java类型的配置文件。viper可以搜索多个路径，但是目前一个viper实例只能支持一个配置文件，viper //viper设置配置文件的名称 viper.SetConfigName(&amp;#34;config&amp;#34;) //viper设置配置文件的类型 viper.SetConfigType(&amp;#34;yaml&amp;#34;) //viper设置配置文件所在的路径 viper.AddConfigPath(&amp;#34;/etc/appname/&amp;#34;) viper.AddConfigPath(&amp;#34;$HOME/.appname&amp;#34;) viper.AddConfigPath(&amp;#34;.&amp;#34;) //viper读取配置文件 err := viper.ReadInConfig() if err != nil { // Handle errors reading the config file 	panic(fmt.Errorf(&amp;#34;Fatal error config file: %w \n&amp;#34;, err)) } </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/8.%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/1.%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/8.%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/1.%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/6.-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/1.%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/6.-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/1.%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</guid>
+      <description>数据结构#链表#栈和队列#列表#字典#树#排序算法#在计算机开发语言中，只要一提到排序算法，肯定是对切片的数值类型的数据进行排序，因为别的数据类型根本没有排序算法一说。
+选择排序#冒泡排序#插入排序#希尔排序#快速排序#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/2.watcher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/2.watcher/</guid>
+      <description>watch机制#watch是mvcc包中的一个功能，watch可以监听一个或一组key，key的任何变化都会发出消息，使用watch机制
+可以实现消息的发布和订阅模式。
+首先介绍几个对象:
+1. Event事件,变更的消息是以Event的形式发送出去的,Event包括操作的类型,key,value等。2.watcherwatcher监听一个或一组key,如果有变更,watcher会将变更的内容通过chan发送出去。watcher := client.Watch(context.Background(),&amp;quot;test&amp;quot;)返回的是一个channel,存储的是WatchResponsetype WatchChan &amp;lt;-chan WatchResponse可以通过range循环,WatchResponse3.watcherGroup顾名思义,表示一组watcher,watcherGroup管理多个watcher，能够根据key快速找到监听该key的一个或多个watcher。4.wathableStore5.watchStreamtype WatchResponse struct { Header pb.ResponseHeader Events []*Event CompactRevision int64 Canceled bool Created bool closeErr error cancelReason string } 1. 2. Events []*Event Events是一个列表 type Event mvccpb.Event 举例说明:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/4.%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/4.%E6%95%B0%E6%8D%AE/</guid>
+      <description>KeyValue:
+create_revision: 创建的次数
+mod_revision：修改的次数
+version: 此key修改的次数</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/7.-go-rpc/1.protobuf%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/7.-go-rpc/1.protobuf%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%BF%E7%94%A8/</guid>
+      <description>安装并配置protobuf命令#1.下载客户端命令:#https://github.com/protocolbuffers/protobuf/releases
+将下载后的
+放到
+输入protoc命令，即标识protoc命令已经安装完成。
+2.下载安装go语言可以调用protobuf命令的库
+go get github.com/golang/protobuf/protoc-gen-go 3.编写一个文件
+https://developers.google.cn/protocol-buffers/docs/proto3
+定义一个消息类型</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/7.-go-rpc/2.go-rpc%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/7.-go-rpc/2.go-rpc%E7%AE%80%E4%BB%8B/</guid>
+      <description>golang官方本身提供了rpc库，还有许多第三方库为golang提供了rpc支持，大部分第三方rpc库的实现都是通过protobuf进行数据编码，根据protobuf声明文件自动生成rpc方法定义与服务注册代码，在golang可以很方便的进行rpc服务调用。
+go语言自身的net/rpc库#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9D%E5%A7%8B%E5%8C%96/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/1.%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%9D%E5%A7%8B%E5%8C%96/</guid>
+      <description>连接msyql
+1.gorm驱动包的选择
+官网地址：https://github.com/go-gorm/gorm.git
+官方：https://gorm.io/
+import (&amp;quot;github.com/jinzhu/gorm&amp;quot;_ &amp;quot;github.com/go-sql-driver/mysql&amp;quot;)或者是:import (&amp;quot;github.com/jinzhu/gorm&amp;quot;_ &amp;quot;github.com/jinzhu/gorm/dialects/mysql&amp;quot;)注:github.com/go-sql-driver/mysql和github.com/jinzhu/gorm/dialects/mysql都为go连接mysql的驱动包,这两个使用哪个都可以,但必须使用一个。数据库连接池:gorm使用database/sql软件包来配置和维护数据库连接池import (_ &amp;quot;gorm.io/driver/mysql&amp;quot;&amp;quot;gorm.io/gorm&amp;quot;)import (_ &amp;quot;github.com/go-gorm/mysql&amp;quot;&amp;quot;github.com/go-gorm/gorm&amp;quot;)此时返回的是一个数据库的
+本地创建struct与表的关联
+因为前面已经创建了表关联，因此所有的对struct结构体的操作都会映射到相应的表结构上去，拥有的方法如下:
+Create</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/2.%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%85%B3%E8%81%94/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/2.%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%85%B3%E8%81%94/</guid>
+      <description>数据库模型可以使用的字段
+   标签名 标签含义     column 结构体在数据库表中的列名   primaryKey 指定列名是否为主键   unique 指定该列是否唯一   default 指定列的默认值   not null 指定列是否非空                    多个表之间相互关联的标签#多个表之间相互关联的标签
+   标签名 标签含义     foreignKey 指定当前模型的列是否为连接表的外键   references 指定引用表的列名，其将被映射为连接表外键   polymorphic 指定多态类型，比如模型名   polymorphicValue 指定多态值、默认表名   many2many 指定连接表表名   joinForeignKey 指定连接表的外键列名，其将被映射到当前表   joinReferences 指定连接表的外键列名，其将被映射到引用表   constraint 关系约束，例如：OnUpdate、OnDelete    数据库模型的定义:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/3.%E8%A1%A8%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/8.-mysql%E6%95%B0%E6%8D%AE%E5%BA%93/3.%E8%A1%A8%E6%93%8D%E4%BD%9C/</guid>
+      <description>由于前面已经创建了
+增加操作#更新
+批量添加记录
+删除操作#改操作#查询操作#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/9.gin%E6%A1%86%E6%9E%B6/1.%E8%8E%B7%E5%8F%96%E8%B7%AF%E5%BE%84%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0/1.%E8%8E%B7%E5%8F%96%E8%B7%AF%E5%BE%84%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/9.gin%E6%A1%86%E6%9E%B6/1.%E8%8E%B7%E5%8F%96%E8%B7%AF%E5%BE%84%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0/1.%E8%8E%B7%E5%8F%96%E8%B7%AF%E5%BE%84%E4%B8%AD%E7%9A%84%E5%8F%82%E6%95%B0/</guid>
+      <description>c.Param.Get(&amp;#34;name&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/example/collapsed/3rd-level/4th-level/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/example/collapsed/3rd-level/4th-level/</guid>
+      <description>4th Level of Menu#Caesorum illa tu sentit micat vestes papyriferi#Inde aderam facti; Theseus vis de tauri illa peream. Oculos uberaque non regisque vobis cursuque, opus venit quam vulnera. Et maiora necemque, lege modo; gestanda nitidi, vero? Dum ne pectoraque testantur.
+Venasque repulsa Samos qui, exspectatum eram animosque hinc, aut manes, Assyrii. Cupiens auctoribus pariter rubet, profana magni super nocens. Vos ius sibilat inpar turba visae iusto!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/example/hidden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/example/hidden/</guid>
+      <description>This page is hidden in menu#Quondam non pater est dignior ille Eurotas#Latent te facies#Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
+ Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona#O fallor in sustinui iussorum equidem.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/buttons/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/buttons/</guid>
+      <description>Buttons#Buttons are styled links that can lead to local page or external link.
+Example#{{&amp;lt; button relref=&amp;#34;/&amp;#34; [class=&amp;#34;...&amp;#34;] &amp;gt;}}Get Home{{&amp;lt; /button &amp;gt;}} {{&amp;lt; button href=&amp;#34;https://github.com/alex-shpak/hugo-book&amp;#34; &amp;gt;}}Contribute{{&amp;lt; /button &amp;gt;}} Get HomeContribute</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/columns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/columns/</guid>
+      <description>Columns#Columns help organize shorter pieces of content horizontally for readability.
+{{&amp;lt; columns &amp;gt;}} &amp;lt;!-- begin columns block --&amp;gt; # Left Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # Mid Content Lorem markdownum insigne... &amp;lt;---&amp;gt; &amp;lt;!-- magic separator, between columns --&amp;gt; # Right Content Lorem markdownum insigne... {{&amp;lt; /columns &amp;gt;}} Example#Left Content Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/details/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/details/</guid>
+      <description>Details#Details shortcode is a helper for details html5 element. It is going to replace expand shortcode.
+Example#{{&amp;lt; details &amp;#34;Title&amp;#34; [open] &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /details &amp;gt;}} {{&amp;lt; details title=&amp;#34;Title&amp;#34; open=true &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /details &amp;gt;}} TitleMarkdown content Lorem markdownum insigne&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/expand/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/expand/</guid>
+      <description>Expand#Expand shortcode can help to decrease clutter on screen by hiding part of text. Expand content by clicking on it.
+Example#Default#{{&amp;lt; expand &amp;gt;}} ## Markdown content Lorem markdownum insigne... {{&amp;lt; /expand &amp;gt;}} Expand↕Markdown content Lorem markdownum insigne&amp;hellip;With Custom Label#{{&amp;lt; expand &amp;#34;Custom Label&amp;#34; &amp;#34;...&amp;#34; &amp;gt;}} ## Markdown content Lorem markdownum insigne.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/hints/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/hints/</guid>
+      <description>Hints#Hint shortcode can be used as hint/alerts/notification block.
+There are 3 colors to choose: info, warning and danger.
+{{&amp;lt; hint [info|warning|danger] &amp;gt;}} **Markdown content** Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa {{&amp;lt; /hint &amp;gt;}} Example#Markdown content
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat stringit, frustra Saturnius uteroque inter! Oculis non ritibus TelethusaMarkdown content</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/katex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/katex/</guid>
+      <description>KaTeX#KaTeX shortcode let you render math typesetting in markdown document. See KaTeX
+Example#{{&amp;lt; katex [display] [class=&amp;#34;text-center&amp;#34;] &amp;gt;}} f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi {{&amp;lt; /katex &amp;gt;}} \[f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi\]Display Mode Example#Here is some inline example: \(\pi(x)\), rendered in the same line. And below is display example, having display: block \[f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi\]Text continues here.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/mermaid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/mermaid/</guid>
+      <description>Mermaid Chart#MermaidJS is library for generating svg charts and diagrams from text.
+Override Mermaid Initialization Config
+To override the initialization config for Mermaid, create a mermaid.json file in your assets folder!
+Example#{{&amp;lt; mermaid [class=&amp;#34;text-center&amp;#34;]&amp;gt;}} stateDiagram-v2 State1: The state with a note note right of State1 Important information! You can write notes. end note State1 --&amp;gt; State2 note left of State2 : This is the note to the left.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/section/first-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/section/first-page/</guid>
+      <description>First page#Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/section/second-page/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/section/second-page/</guid>
+      <description>Second Page#Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/go/shortcodes/tabs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/shortcodes/tabs/</guid>
+      <description>Tabs#Tabs let you organize content by context, for example installation instructions for each supported platform.
+{{&amp;lt; tabs &amp;#34;uniqueid&amp;#34; &amp;gt;}} {{&amp;lt; tab &amp;#34;MacOS&amp;#34; &amp;gt;}} # MacOS Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Linux&amp;#34; &amp;gt;}} # Linux Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; tab &amp;#34;Windows&amp;#34; &amp;gt;}} # Windows Content {{&amp;lt; /tab &amp;gt;}} {{&amp;lt; /tabs &amp;gt;}} Example#MacOSMacOS This is tab MacOS content.
+Lorem markdownum insigne. Olympo signis Delphis!</description>
+    </item>
+    
+    <item>
+      <title>first</title>
+      <link>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/2.%E5%8F%98%E9%87%8F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/1.-go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/2.%E5%8F%98%E9%87%8F/</guid>
+      <description>变量的声明</description>
+    </item>
+    
+    <item>
+      <title>go循环</title>
+      <link>https://example.com/go/example/2.%E5%BE%AA%E7%8E%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/example/2.%E5%BE%AA%E7%8E%AF/</guid>
+      <description>for循环#go语言的for循环有3种形式
+ 和c的for一样  for{} for condition{}
+  3.最常用的几种形式
+for key,value := range map{ } </description>
+    </item>
+    
+    <item>
+      <title>sync并发</title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/3.sync%E4%BA%92%E6%96%A5%E9%94%81/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/3.sync%E4%BA%92%E6%96%A5%E9%94%81/</guid>
+      <description>sync并发#1. sync.Mutex互斥锁#使用场景: 当应用程序需要对一个
+type Mutex struct { state int32 sema uint32 } Mutex是一个互斥锁,互斥锁的零值是未锁定的互斥锁, sync.Mutex 使用方法:
+1.第一种情况,当所有的应用程序都调用一个函数对一个进行操作的时候 mutex := &amp;amp;sync.Mutex{} func work() { mutex.Lock() /* 对一个共享变量或者文件,网络等设备的操作,(比如切片,MAP,结构体,指针,文件等操作) */ mutex.Unlock() } 该项目程序中要想对某个共享的变量或者文件操作，只能通过aa函数进行操作,正常情况下，任何函数都可以调用aa,这样就能保证了aa函数每次只能执行一次，因此这种控制方式与其说是对文件进行锁控制，实际上是对该操作函数进行的控制。 2.第二种情况,多个函数都可以对该共享的变量进行操作 func aa(){ } func bb(){ } 2. sync.RWMutex读写互斥锁#sync.RWMutex是一个读写互斥锁，它提供了我们上面的刚刚看到的sync.Mutex的Lock和UnLock方法（因为这两个结构都实现了sync.Locker接口）。但是，它还允许使用RLock和RUnlock方法进行并发读取
+mutex := &amp;amp;sync.RWMutex{} mutex.Lock() // Update 共享变量 mutex.Unlock() mutex.RLock() // Read 共享变量 mutex.RUnlock() 3. sync.WaitGroup等待组#4. sync.Map#sync.Map是一个带有锁机制的go语言map,</description>
+    </item>
+    
+  </channel>
+</rss>

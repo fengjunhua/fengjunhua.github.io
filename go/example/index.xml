@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go语言基础教程 on devops</title>
+    <link>https://example.com/go/example/</link>
+    <description>Recent content in go语言基础教程 on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/go/example/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/go/example/hidden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/example/hidden/</guid>
+      <description>This page is hidden in menu#Quondam non pater est dignior ille Eurotas#Latent te facies#Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
+ Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor  Cum honorum Latona#O fallor in sustinui iussorum equidem.</description>
+    </item>
+    
+    <item>
+      <title>go循环</title>
+      <link>https://example.com/go/example/2.%E5%BE%AA%E7%8E%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/go/example/2.%E5%BE%AA%E7%8E%AF/</guid>
+      <description>for循环#go语言的for循环有3种形式
+ 和c的for一样  for{} for condition{}
+  3.最常用的几种形式
+for key,value := range map{ } </description>
+    </item>
+    
+  </channel>
+</rss>

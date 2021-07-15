@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4.go语言并发控制s on devops</title>
+    <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/</link>
+    <description>Recent content in 4.go语言并发控制s on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/1.goroutine%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/1.goroutine%E7%AE%80%E4%BB%8B/</guid>
+      <description>goroutine源码解析#调度相关的数据结构有三个,M(线程)，P(调度器)，G(goroutine)
+sync包控制的
+写法套路#func work(){ for{ seletct: case: case: default: case: return } } 必须有一个退出机制，也就是说必须有一个case需要触发return函数。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/2.%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%A5%97%E8%B7%AF/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/2.%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6%E5%A5%97%E8%B7%AF/</guid>
+      <description>并发控制套路#并发的目的是实现我们想要的功能
+1.单纯的并发，也是最原始的并发，单纯的只是执行一定数量的函数#概述: 实现原理和思路
+实现函数func work()
+调用方式
+2.不限定并发的次数，但是多个函数调用的情况，sync包实现
+3.长期监听，但是满足一定的条件才能执行
+4.通过context函数控制work函数的执行。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/4.channel%E5%B9%B6%E5%8F%91/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/4.channel%E5%B9%B6%E5%8F%91/</guid>
+      <description>date: &amp;quot;2015-10-25 T 08:36:54-07:00&amp;quot; title: &amp;quot;channel并发&amp;quot; draft: falsechannel并发#通道(channel)是go语言中的一个核心类型，是用来传递数据的一个数据结构，通过它
+channel是一种指针类型的数据结构，通过make来分配内存。
+ch := make(chan int) channel#ch &amp;lt;- v读取channel中的值#循环遍历channel
+使用for &amp;hellip; range语句可以循环遍历channel中的值：
+select取值
+timeout超时处理
+select有一个很重要的作用就是超时处理,
+Timer和Ticker#5. close关闭channel#6. channel同步#channel可以处理
+channel常见的使用方法#1. 单个channel，一个函数用来写，一个函数用来读#2.多个channel#for{}3.select语句#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/5.context%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/5.context%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/</guid>
+      <description>context上下文#为什么需要使用context，及context的结构#对于服务器传入的请求需要创建上下文，
+Background()
+TODO()
+context接口分析
+根context#获取一个根context有两种方式，分别是调用调用context包中的background()方法和调用todo()方法。
+子context#子context有四种，分别是
+他们都是使用context包的四个with函数来获取的，
+带有cancel函数的子context#WithCancel
+2. 带有deadline函数的子context#2.1源码分析#// func WithDeadline(parent Context, d time.Time) (Context, CancelFunc) 1.带有deadline函数的子context是使用context包的WithDeadline()函数来获取的
+2.
+3.
+调用如下
+流程分析
+取消结束
+3. 带有timeout函数的子context#// func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc) { return WithDeadline(parent, time.Now().Add(timeout)) } 1.context包的WithTimeout()函数接收一个
+4. 带有value函数的子context#WithValue</description>
+    </item>
+    
+    <item>
+      <title>sync并发</title>
+      <link>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/3.sync%E4%BA%92%E6%96%A5%E9%94%81/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/4.go%E8%AF%AD%E8%A8%80%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/3.sync%E4%BA%92%E6%96%A5%E9%94%81/</guid>
+      <description>sync并发#1. sync.Mutex互斥锁#使用场景: 当应用程序需要对一个
+type Mutex struct { state int32 sema uint32 } Mutex是一个互斥锁,互斥锁的零值是未锁定的互斥锁, sync.Mutex 使用方法:
+1.第一种情况,当所有的应用程序都调用一个函数对一个进行操作的时候 mutex := &amp;amp;sync.Mutex{} func work() { mutex.Lock() /* 对一个共享变量或者文件,网络等设备的操作,(比如切片,MAP,结构体,指针,文件等操作) */ mutex.Unlock() } 该项目程序中要想对某个共享的变量或者文件操作，只能通过aa函数进行操作,正常情况下，任何函数都可以调用aa,这样就能保证了aa函数每次只能执行一次，因此这种控制方式与其说是对文件进行锁控制，实际上是对该操作函数进行的控制。 2.第二种情况,多个函数都可以对该共享的变量进行操作 func aa(){ } func bb(){ } 2. sync.RWMutex读写互斥锁#sync.RWMutex是一个读写互斥锁，它提供了我们上面的刚刚看到的sync.Mutex的Lock和UnLock方法（因为这两个结构都实现了sync.Locker接口）。但是，它还允许使用RLock和RUnlock方法进行并发读取
+mutex := &amp;amp;sync.RWMutex{} mutex.Lock() // Update 共享变量 mutex.Unlock() mutex.RLock() // Read 共享变量 mutex.RUnlock() 3. sync.WaitGroup等待组#4. sync.Map#sync.Map是一个带有锁机制的go语言map,</description>
+    </item>
+    
+  </channel>
+</rss>

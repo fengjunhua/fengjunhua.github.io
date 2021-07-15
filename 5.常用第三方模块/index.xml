@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5.常用第三方模块s on devops</title>
+    <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/</link>
+    <description>Recent content in 5.常用第三方模块s on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/1.log/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/1.log/</guid>
+      <description>go语言标准日志库log#go语言内置的log包实现了简单的日志服务，使用go语言原生的log日志函数，最大的优点就是使用非常简单，我们可以设置任何io.Writer作为日志记录输出并向其发送任何想要发送的日志数据。
+log包定义了logger类型的结构体，可以通过调用该实例的，主要提供了3种接口，分别是&amp;quot;Print&amp;quot;,
+&amp;ldquo;Panic&amp;rdquo;,&amp;ldquo;Fatal&amp;rdquo;，对于每一种接口，都提供了三种调用方式，分别是&amp;quot;Print&amp;quot;,&amp;ldquo;Printf&amp;rdquo;,&amp;ldquo;Println&amp;quot;打印，基本和fmt中的
+函数类似。
+基本用法# Print级别的日志，(log.Print|log.Printf|log.Println) : 打印日志，和fmt包每什么区别，只是前面加上了日志的格式。 Fatal级别的日志，(log.Fatal|log.Fatalf|log.Fatalln) ：  Fatal系列
+log#配置logger
+默认情况下logger只会提供日志的时间信息，但是很多情况下，我们为了，记录日志的文件名和行号等。
+log标准库中的Flags函数
+log标准库提供了如下的flag选项，他们是一系列定义好的常量
+原生log日志库的配置#默认情况下，go的原生log日志只会增加打印日志的日期和时间信息，但是很多情况下，为了更好的分析应用程序，增加日志的可读性，我们经常需要添加一些额外的其他信息，比如日志的文件名和行号等。log原生日志库为我们提供了这些设置的方法。
+1. 配置日志的打印信息#func SetFlags(flag int)func Flags() intlog标准日志库为我们提供了如下一些现有的配置选项
+Ldate: 增加打印日期，格式： 2009/01/23Ltime: 增加打印时间，格式： 01:23:23Lmicroseconds Llongfile LshortfileLUTC: 使用UTC时间LstdFlags一般来说，我们使用这些
+2. 配置日志的前缀#我们可以使用调用log.SetPrefix()函数来
+func SetPrefix(prefix string)func Prefix() string3.配置日志的输出位置#func SetOutput(w io.Writer)4.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/2.zap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/2.zap/</guid>
+      <description>zap日志库
+前面我们已经介绍了go语言中原生log日志函数库的使用，正常情况下，我们不会使用go语言的原生日志函数，而是使用第三方的日志函数库。
+使用#zap提供了两种类型的日志记录器，传统的日志记录器Logger和Sugared Logger，在每一微妙和每一次内存分配都很重要的上下文中，使用Logger,他比Sugared Logger更快，内存分配次数更少也更节约内存空间，但它只支持强类型的结构化日志记录。
+1. 传统的logger记录器#1.1声明一个logger#我们可以使用zap.NewDevelopment()/zap.NewProduction()或着zap.NewExample创建一个logger,返回的是一个*zap.Logger的指针对象。 使用logger可以调用 默认情况下所有的日志都会输出打印到程序的console界面。 日志记录器的语法格式是这样的: func (log *Logger) MethodXXX(msg string,fields ... Field) 将日志写入文件
+默认情况下，zap是将日志输出到控制台终端，正常情况下，我们需要将日志写入到文件
+func New(core zapcore.Core, options ...Option) *Logger func NewCore(enc Encoder, ws WriteSyncer, enab LevelEnabler) Corezapcore.Core需要使用三个配置 --- Encoder,WriteSyncer,LogLevel1.Encoder:编码器,如何写入日志的,我们将使用开箱即用的zapcore.NewJSONEncoder(zap.NewDevelopmentEncoderConfig())2.WriterSyncer: 指定日志将写入到哪里去,file,2. Sugared Logger#我们也可以使用Sugared Logger来实现相同的功能。
+Sugared Logger和传统的logger大部分的实现基本相同，唯一的区别是
+3. 定制一个我们想要的logger函数#前面我们已经介绍了传统的logger函数的使用方法，此时生成的logger是使用默认的zap函数创建的，但是很多情况下，我们不能使用默认的zap函数创建的logger，我们需要根据自己的实际情况定制一个属于我们自己的logger函数，比如，我们需要把日志输出到特定的文件，而不是打印到应用程序控制台。
+使用1.定义日志输出的文件2.定义日志的编码格式3.定义日志的输出级别4.定义日志的前缀时间格式5.定义日志的切割定制logger: 1.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/3.%E4%BD%BF%E7%94%A8zap%E6%8E%A5%E5%8F%97gin%E6%A1%86%E6%9E%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E6%97%A5%E5%BF%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/1.-%E6%97%A5%E5%BF%97/3.%E4%BD%BF%E7%94%A8zap%E6%8E%A5%E5%8F%97gin%E6%A1%86%E6%9E%B6%E7%9A%84%E9%BB%98%E8%AE%A4%E6%97%A5%E5%BF%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/1.swagger%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/1.swagger%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</guid>
+      <description>生成swageer文档#官方文档:
+https://github.com/swaggo/swag/blob/master/README.md 1. 首先下载swag命令go get -u github.com/swaggo/swag/cmd/swag下载完成后将$GOPATH/bin/添加到Path环境变量,此时会在GOPATH下的bin目录下生成一个swag.exe文件，把$GOPATH/bin/添加到Path环境变量才能调用swag命令,然后在项目的根目录下执行swag命令,也就是说项目的main.go函数的相同目录下执行命令:swag init2.此时会在根目录下生成docs目录,内含三个文件:docs.goswagger.jsonswagger.yam3.下载gin-swagger软件包go get -u github.com/swaggo/gin-swaggergo get -u github.com/swaggo/files4.然后在项目中引入swagger软件包,并导入新生成的docs目录import (swaggerFiles &amp;quot;github.com/swaggo/files&amp;quot;ginSwagger &amp;quot;github.com/swaggo/gin-swagger&amp;quot;_ &amp;quot;github/fengjunhua/cronjobs/docs&amp;quot;)url := ginSwagger.URL(&amp;quot;http://localhost:8090/swagger/doc.json&amp;quot;)router.GET(&amp;quot;/swagger/*any&amp;quot;, ginSwagger.WrapHandler(swaggerFiles.Handler,url))5.重新生成swagger文档,并本地访问swag inithttp://localhost:8090/swagger/index.htmlswag命令详解#</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/2.main%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9A%E4%B9%89/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/2.main%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE%E5%92%8C%E5%AE%9A%E4%B9%89/</guid>
+      <description>swagger详情页的配置#当我们打开swagger界面时，swagger首先会对整个界面做一个描述，这个也称为swagger的详情页，swagger的详情页是在main函数中配置和定义的。
+   annotation 描述 举例     title Required. The title of the application. // @title Swagger Example API   version Required. Provides the version of the application API. // @version 1.0   description A short description of the application. // @description This is a sample server celler server.   tag.name Name of a tag. // @tag.name This is the name of the tag   tag.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/3.controller%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/2.-swagger/3.controller%E5%87%BD%E6%95%B0%E9%85%8D%E7%BD%AE/</guid>
+      <description>单个api相关的注解
+   标记符号 描述     tags 每个api所属的大标签列表,可以有多个大标签,每个标签用逗号分隔。   summary 该api所操作的简短的说明,系统会将summary与router会自动结合起来   description A verbose explanation of the operation behavior.   description.markdown A short description of the application. The description will be read from a file named like endpointname.md   id A unique string used to identify the operation. Must be unique among all API operations.   accept A list of MIME types the APIs can consume.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/4.-%E8%AF%BB%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/1.%E4%BD%BF%E7%94%A8os.args%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/4.-%E8%AF%BB%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/1.%E4%BD%BF%E7%94%A8os.args%E8%8E%B7%E5%8F%96%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/5.-%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0/1.viper/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/5.-%E8%AF%BB%E5%8F%96%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%82%E6%95%B0/1.viper/</guid>
+      <description>go语言配置管理神器 &amp;ndash; Viper#读取配置文件#viper仅需要一个很少的配置,因为viper也需要知道配置从哪里读取配置文件，viper支持JSON，TOML,YAML,HCL,INI,envfile以及Java类型的配置文件。viper可以搜索多个路径，但是目前一个viper实例只能支持一个配置文件，viper //viper设置配置文件的名称 viper.SetConfigName(&amp;#34;config&amp;#34;) //viper设置配置文件的类型 viper.SetConfigType(&amp;#34;yaml&amp;#34;) //viper设置配置文件所在的路径 viper.AddConfigPath(&amp;#34;/etc/appname/&amp;#34;) viper.AddConfigPath(&amp;#34;$HOME/.appname&amp;#34;) viper.AddConfigPath(&amp;#34;.&amp;#34;) //viper读取配置文件 err := viper.ReadInConfig() if err != nil { // Handle errors reading the config file 	panic(fmt.Errorf(&amp;#34;Fatal error config file: %w \n&amp;#34;, err)) } </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/8.%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/1.%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/5.%E5%B8%B8%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E6%A8%A1%E5%9D%97/8.%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/1.%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

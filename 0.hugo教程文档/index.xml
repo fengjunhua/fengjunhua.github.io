@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>0.hugo教程文档s on devops</title>
+    <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/</link>
+    <description>Recent content in 0.hugo教程文档s on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/1.hugo%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/1.hugo%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%AE%89%E8%A3%85/</guid>
+      <description>项目官网地址:
+创建各个层级的目录
+config目录#hugo附带了大量的配置指令,config目录是将这些配置指令存储为JSON,YAML和TOML文件的地方.每一个根设置对象都可以配置成单独的文件,并且可以根据具体的环境进行优化，比如开发环境，测试环境，生产环境等.当我们只需要一个简单的环境而不需要使用这么多的配置，并且也不需要配置多个环境的时候，我们可以使用一个root根目录下的一个单独的config.toml文件作为配置。 许多网站可能不需要什么配置，但Hugo提供了大量的配置指令，用于更精细地指导Hugo如何构建网站。注意：默认情况下不创建配置目录。 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/2.%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/</guid>
+      <description>hugo是主要的命令，用来构建我们的网站
+使用方法
+hugo [flags] hugo [command] hugo [command] [flags] 常用的命令主要有:
+new: server: config: 打印网站的配置 convert: 转换网站的content内容到不同的形式 deploy: 部署网站到云环境 env: 打印hugo的版本的环境变量 gen: help: import: list: mod: version: 常用的选项参数主要有:
+-b, --baseURL string -D, --buildDrafs创建一个新的网站#hugo new site &amp;lt;网站名字&amp;gt; 生成静态目录#hugo</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/3.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/3.%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/</guid>
+      <description>配置文件详解
+如何配置hugo网站呢?
+配置文件:
+hugo使用config.
+配置目录#除了使用单个站点配置文件外，还可以使用configDir目录（默认为config/）来维护更简单的组织和特定于环境的设置。
+1. 2.theme主题 dataDir = &amp;#34;&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/4.%E9%83%A8%E7%BD%B2%E5%88%B0githubpages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/0.hugo%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3/4.%E9%83%A8%E7%BD%B2%E5%88%B0githubpages/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

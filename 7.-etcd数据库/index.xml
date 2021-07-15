@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>7. etcd数据库s on devops</title>
+    <link>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 7. etcd数据库s on devops</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/2.watcher/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/2.watcher/</guid>
+      <description>watch机制#watch是mvcc包中的一个功能，watch可以监听一个或一组key，key的任何变化都会发出消息，使用watch机制
+可以实现消息的发布和订阅模式。
+首先介绍几个对象:
+1. Event事件,变更的消息是以Event的形式发送出去的,Event包括操作的类型,key,value等。2.watcherwatcher监听一个或一组key,如果有变更,watcher会将变更的内容通过chan发送出去。watcher := client.Watch(context.Background(),&amp;quot;test&amp;quot;)返回的是一个channel,存储的是WatchResponsetype WatchChan &amp;lt;-chan WatchResponse可以通过range循环,WatchResponse3.watcherGroup顾名思义,表示一组watcher,watcherGroup管理多个watcher，能够根据key快速找到监听该key的一个或多个watcher。4.wathableStore5.watchStreamtype WatchResponse struct { Header pb.ResponseHeader Events []*Event CompactRevision int64 Canceled bool Created bool closeErr error cancelReason string } 1. 2. Events []*Event Events是一个列表 type Event mvccpb.Event 举例说明:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/4.%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/7.-etcd%E6%95%B0%E6%8D%AE%E5%BA%93/4.%E6%95%B0%E6%8D%AE/</guid>
+      <description>KeyValue:
+create_revision: 创建的次数
+mod_revision：修改的次数
+version: 此key修改的次数</description>
+    </item>
+    
+  </channel>
+</rss>
